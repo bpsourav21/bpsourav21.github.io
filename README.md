@@ -1,37 +1,54 @@
-## Welcome to GitHub Pages
+## *Md Mahadi Hasan Sourav*
+### Fullstack Developer
 
-You can use the [editor on GitHub](https://github.com/bpsourav21/bpsourav21.github.io/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
+I am seeking a new challenge in a progressive & customer centric organization where I can show my credibility and learn new things for improving myself. I want to achieve a higher level of success with hardworking, dedication  and devotion to the assigned job in the assigned field
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Skills
 
-### Markdown
+![image](https://user-images.githubusercontent.com/19387437/128892836-66539df9-4b99-40e1-bd36-9782a760ebb8.png)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-```markdown
-Syntax highlighted code block
+## Work experience
 
-# Header 1
-## Header 2
-### Header 3
+###CHALDAL LIMITED
+- Chaldal website (ReactJS + Node, cotributed most of the new features
+ like Mulcity support, Address updaon, Chaldal Credit, Recipes,
+ Donaon, Refund, Due payment, Geolocaon,
+ visit hps://chaldal.com/)
+- Chaldal Mobile App, IOS and Android (React Nave + Mobx)
+- Chaldal Admin & Create REST APIs (Dot net + Mysql)
+- Chaldal Vegetable network (React+ Redux+ FSharp + Postgress, Mostly
+ done FE part)
+- Chaldal Vong System (React + Redux + FSharp + Postgress, Mostly
+ done FE part)
+- Chaldal Food Aid with admin panel (React + Redux + FSharp,
+ visit hps://foodaid.chaldal.com/)
+- Integrate different Payment methods (bKash, Portwallet, Braintree,
+ etc.)
+- Integrate Applicaon Insight analycs
+- Integrate Google RecaptchaV3
+- Solved Euler Project using F sharp
+ (visit hps://github.com/bpsourav21/EulerProject)
+ 
+### BOND TECHNOLOGIES
+Soware Engineer (1st January, 2017 ll 31 June 2018)
+- Cashier Lite (React Nave+ Redux + PouchDb)
+- Binder ERP Soluons (React + Redux + Nodejs + MongoDB +
+ CouchDB + UI/UX)
+- Edith Cafe Restaurant POS (React Nave + Redux + PouchDb +
+ CouchDB + Nodejs)
+ 
+ ###RT SOFTBD
+Intern (1st December, 2017 to 31st December, 2017)
 
-- Bulleted
-- List
+## Education
+###Rajshahi University of Engineering & Technology (B. Sc. Eng.)
+Department of Computer Science & Engineering.
+CGPA- 3.15 out of 4
 
-1. Numbered
-2. List
+###Notre Dame College, Dhaka. (HSC)
+GPA-5.00 (Dhaka Board-2011)
 
-**Bold** and _Italic_ and `Code` text
+###Mojheel Govt Boys’ High School, Dhaka. (SSC)
+GPA-5.00 (Dhaka Board-2009)
 
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/bpsourav21/bpsourav21.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
