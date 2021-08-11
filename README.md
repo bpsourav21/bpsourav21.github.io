@@ -170,8 +170,8 @@ Node JS, Typescript, React-native, Redux, Pouchdb, Couchdb
 ## Training: 	
 
 ### Leveraging ICT for Growth, Employment and Governance (LICT)
-**Bangladesh Computer Council**
-12-Mar-2015 - 04-May-2015
+Bangladesh Computer Council
+12-Mar-2015 to  04-May-2015
 
 
 ## Language Skills:
