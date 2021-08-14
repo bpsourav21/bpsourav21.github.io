@@ -38,7 +38,7 @@ Photoshop | ![65%](https://progress-bar.dev/65)        | Illustrator | ![40%](ht
 - Binder ERP Soluons (React + Redux + Nodejs + MongoDB + CouchDB + UI/UX)
 - Edith Cafe Restaurant POS (React Nave + Redux + PouchDb + CouchDB + Nodejs)
  
- ### RT SOFTBD
+ ###  RT SOFTBD
  **Intern (1st December, 2017 to 31st December, 2017)**
  - Design website and admin panel (PHP + SQL + Bootstrap)
 
