@@ -3,10 +3,10 @@ I am seeking a new challenge in a progressive & customer centric organization wh
 ## Contact
 
 Option                                                                                                                  | Details
------------------------------------------------------------------------------------------------------------------------ | ---- 
+:------:                                                                                                                | :----: 
 ![telephone (1)](https://user-images.githubusercontent.com/19387437/129446798-584ed9a8-2ccf-4f82-b6a3-91251eda3aec.png) | +8801671820025 
 ![gmail (1)](https://user-images.githubusercontent.com/19387437/129446796-c3dc1bf8-a547-4fe6-bb84-53e82710f4c6.png)     | bpsourav21@gmail.com 
-![linkedin (1)](https://user-images.githubusercontent.com/19387437/129446799-b722f996-99ba-469f-b21a-942fa30d55cc.png)  | https://www.linkedin.com/in/bpsourav21/
+![linkedin (1)](https://user-images.githubusercontent.com/19387437/129446799-b722f996-99ba-469f-b21a-942fa30d55cc.png)  | [Linkedin](https://www.linkedin.com/in/bpsourav21/)
 
 
 ## Technical Skills
