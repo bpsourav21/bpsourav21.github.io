@@ -1,5 +1,12 @@
 I am seeking a new challenge in a progressive & customer centric organization where I can show my credibility and learn new things for improving myself. I want to achieve a higher level of success with hardworking, dedication and devotion to the assigned job in the assigned field
 
+## Contact
+:telephone: +8801671820025
+
+:e-mail: bpsourav21@gmail.com
+
+:link: [Linkedin](https://www.linkedin.com/in/bpsourav21/)
+
 ## Technical Skills
 
 Technology  | level                                    | Technology | level
@@ -38,8 +45,8 @@ Photoshop | ![65%](https://progress-bar.dev/65)        | Illustrator | ![40%](ht
 - Binder ERP Soluons (React + Redux + Nodejs + MongoDB + CouchDB + UI/UX)
 - Edith Cafe Restaurant POS (React Nave + Redux + PouchDb + CouchDB + Nodejs)
  
- ###  RT SOFTBD
- **Intern (1st December, 2017 to 31st December, 2017)**
+### RT SOFTBD
+**Intern (1st December, 2017 to 31st December, 2017)**
  - Design website and admin panel (PHP + SQL + Bootstrap)
 
 
