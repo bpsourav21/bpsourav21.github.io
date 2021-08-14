@@ -19,21 +19,22 @@ Photoshop | ![65%](https://progress-bar.dev/65)        | Illustrator | ![40%](ht
 ## Work experience
 
 ### CHALDAL LIMITED
-**Soware Engineer (3rd June, 2018 to till now)**
-- Chaldal website (ReactJS + Node, cotributed most of the new features like Mulcity support, Address updation, Chaldal Credit, Recipes, Donation, Refund, Due payment, Geolocation, visit [Chaldal](https://chaldal.com/))
-- Chaldal Mobile App, IOS and Android (React Native + Mobx) [Google Play](https://play.google.com/store/apps/details?id=com.chaldal.poached&hl=en&gl=US)
-- Chaldal Admin & Create REST APIs (Dot net + Mysql)
-- Chaldal Vegetable network (React+ Redux+ FSharp + Postgress, Mostly done FE part)
-- Chaldal Vong System (React + Redux + FSharp + Postgress, Mostly done FE part)
+**Software Engineer (3rd June, 2018 to till now)**
+- Chaldal website (ReactJS + Node + Typesctipt + SQL + Dotnet Core, cotributed most of the new features like Mulcity support, Address updation, Chaldal Credit, Recipes, Donation, Refund, Due payment, Geolocation and so many features. visit [Chaldal](https://chaldal.com/))
+- Chaldal Mobile App, IOS and Android (React Native + Mobx + Typescript) [Google Play](https://play.google.com/store/apps/details?id=com.chaldal.poached&hl=en&gl=US), [App Store](https://apps.apple.com/us/app/chaldal-online-grocery/id1104493220)) 
+- Chaldal Admin & Create REST APIs ( F# + SQL + Dotnet Core, mostly created BE rest APIs and minor business logic changes)
 - Chaldal Food Aid with admin panel (React + Redux + FSharp, visit [Foodaid](https://foodaid.chaldal.com/))
+- Chaldal Vegetable network (React+ Redux+ FSharp + Postgress, Mostly done FE part)
+- Chaldal Voting System (React + Redux + FSharp + Postgress, Mostly done FE part)
 - Integrate different Payment methods (bKash, Portwallet, Braintree, etc.)
-- Integrate Application Insight analytics
+- Integrate Application Insights analytics
 - Integrate Google RecaptchaV3
+- Mentoring junior developers and review codes
 - Solved Euler Project using F sharp (visit [GitHub](https://github.com/bpsourav21/EulerProject) )
  
 ### BOND TECHNOLOGIES
-**Soware Engineer (1st January, 2017 ll 31 June 2018)**
-- Cashier Lite (React Nave+ Redux + PouchDb)
+**Software Engineer (1st January, 2017 ll 31 June 2018)**
+- Cashier Lite (React Native + Redux + PouchDb)
 - Binder ERP Soluons (React + Redux + Nodejs + MongoDB + CouchDB + UI/UX)
 - Edith Cafe Restaurant POS (React Nave + Redux + PouchDb + CouchDB + Nodejs)
  
@@ -57,47 +58,22 @@ GPA-5.00 (Dhaka Board-2009)
 
 ## Professional Project Experience:
 
-### Project Title: Chaldal website
+### Project Title: Chaldal website and Mobile APP (IOS + Android)
 
 **Project Overview:**
 
-Ecommerce website selling groceries and other commodities with our day to day life. Deliver orders within an hour is the key motto. Continuous development going for making service good and more available to the customers.
+Ecommerce website selling groceries and other commodities with our day to day life. Deliver orders within an hour is the key motto. This prject has separate business logic along with some microservices. Also have huge admin system for inventory, purchase, order, delivery process etc management. Continuous development going for making service good and more available to the customers.
 
-**Project Link:**  [Chaldal](www.chaldal.com)
+**Project Link:**  [Chaldal](www.chaldal.com), [Google Play](https://play.google.com/store/apps/details?id=com.chaldal.poached&hl=en&gl=US), [App Store](https://apps.apple.com/us/app/chaldal-online-grocery/id1104493220)
 
 **Technology Used:**
 
 ```
-ASP.NET, MVC Pattern Entity Framework, SQL database, Node JS, React JS, Typescript
+ASP.NET, MVC Pattern Entity Framework, F#,  SQL database, Node JS, React JS, Typescript, React Native, Mobx 
 ```
-**Part:**
-
-Planning + Designing + Building +  Testing
-
 **Role:**
 
-Contributed most of the new features like Mulcity support, Address updation, Chaldal Credit, Recipes, Donation, Refund, Due payment, Geolocation. Also mentoring  junior developer and review codes
-
-
-### Project Title: Chaldal Mobile APP (IOS + Android)
-
-**Project Overview:**
-
-Ecommerce website selling groceries and other commodities with our day to day life. Deliver orders within an hour is the key motto. Continuous development going for making service good and more available to the customers.
-
-
-**Project Link:**  [Google Play](https://play.google.com/store/apps/details?id=com.chaldal.poached&hl=en&gl=US)
-
-```
-React Native, Mobx, Rest web API, Appcenter codepush, Typescript
-```
-**Part:**
-
-Planning + Designing + Building +  Testing + Deployment
-
-**Role:**
-
-Design All new features and maintain the app with website changes. Also mentoring junior developer and review codes
+Contributed most of the features like Multicity support, Address updation, Chaldal Credit, Recipes, Donation, Refund, Due payment, Geolocation, Recatpcha integration, Payment methods like bKash, Portwallet, Braintree etc integration, Crisp chat integration, generalized component for select html tag. Mostly done frontend based task but also worked on creating several rest APIs and changing business logic. Also involved mentoring junior developers and reviewing their codes.
 
 
 ### Project Title: Chaldal Food Aid with admin panel
@@ -109,26 +85,40 @@ Donation site where any customer can donate. This project was run under the Worl
 **Project Link:**  [Foodaid](https://foodaid.chaldal.com/)
 
 ```
-React, Redux, FSharp, SQL Database
+React, Redux, FSharp, SQL Database, MVC Pattern Entity Framework
 ```
-**Part:**
-
-Designing + Building +  Testing + Deployment
 
 **Role:**
 
-Design total Front end with admin panel. Handling different level permission for accessing different users.
+Design total Front end with admin panel. Handling different level permission for accessing different users. Added responsive UI and error handling. 
+
+
+### Project Title: Chaldal Internal Voting System
+
+**Project Overview:**
+
+A seperate voting system where employees can vote based on any opinion or any events. Employees can nominate their desired person and also can choose best performer using this.
+
+**Project Link:**  [Foodaid](https://foodaid.chaldal.com/)
+
+```
+React, Redux, FSharp, SQL Database, MVC Pattern Entity Framework
+```
+
+**Role:**
+
+Design total Front end with responsive UI and error handling message.
 
 
 
 
-## Academic or Personal Project Experience:
+## Personal Project Experience:
 
 ### Project Title: E Commerce rest API template
 
 **Project Overview:**
 
-Rest API endpoint with login system with token verification with email. Handled with permission level login. Schema for user, product, shopping cart, order etc were completed. Development is still ongoing. Adding new modules into it.
+Rest API endpoint having login system with token verification with email. Handled with permission level login. Schema for user, product, shopping cart, order etc were completed. This rest API endpoint can be used for both website and app. Development is still ongoing. Adding new modules into it.
 
 **Project Link:**  [Github](https://github.com/bpsourav21/RandomArrayApi)
 
@@ -141,7 +131,7 @@ Node JS, MongoDB, Typescript
 
 **Project Overview:**
 
-Mobile app for ecommerce app. Users can login with mail and phone number. This app has responsive UI and smooth UX.  This app can be used for any kind of e-commerce related business like groceries, clothing, food etc.
+Mobile app for ecommerce app. Users can login with mail and phone number. This app has responsive UI and smooth UX.  This app can be used for any kind of e-commerce related business like groceries, clothing, food etc. Easy to integrate any backend rest API endpoint. 
 
 **Project Link:**  [Github](https://github.com/bpsourav21/RandomArrayApp)
 
@@ -162,8 +152,6 @@ POS application for restaurant business where manager can input order details an
 ```
 Node JS, Typescript, React-native, Redux, Pouchdb, Couchdb
 ```
-
-
 
 
 
