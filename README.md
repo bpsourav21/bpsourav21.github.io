@@ -1,18 +1,21 @@
 I am seeking a new challenge in a progressive & customer centric organization where I can show my credibility and learn new things for improving myself. I want to achieve a higher level of success with hardworking, dedication and devotion to the assigned job in the assigned field
 
 ## Contact
-:telephone: +8801671820025
 
-:e-mail: bpsourav21@gmail.com
+![telephone (1)](https://user-images.githubusercontent.com/19387437/129446798-584ed9a8-2ccf-4f82-b6a3-91251eda3aec.png)  +8801671820025
 
-:link: [Linkedin](https://www.linkedin.com/in/bpsourav21/)
+![gmail (1)](https://user-images.githubusercontent.com/19387437/129446796-c3dc1bf8-a547-4fe6-bb84-53e82710f4c6.png)  <span style="font-size:130">bpsourav21@gmail.com</span>
+
+![linkedin (1)](https://user-images.githubusercontent.com/19387437/129446799-b722f996-99ba-469f-b21a-942fa30d55cc.png) [Linkedin](https://www.linkedin.com/in/bpsourav21/)
+
+
 
 ## Technical Skills
 
 Technology  | level                                    | Technology | level
 ----| ---                                              | --- | ---
 React JS | ![90%](https://progress-bar.dev/90)         | React Native | ![80](https://progress-bar.dev/80)      
-Redux | ![70%](https://progress-bar.dev/70)            |  Mobx | ![75%](https://progress-bar.dev/75)         
+Redux | ![70%](https://progress-bar.dev/70)            | Mobx | ![75%](https://progress-bar.dev/75)         
 Typescript | ![90%](https://progress-bar.dev/90)       | Javascript | ![70%](https://progress-bar.dev/70)         
 Node JS | ![50%](https://progress-bar.dev/50)          | C/C++ | ![50%](https://progress-bar.dev/50)        
 F# | ![30%](https://progress-bar.dev/30)               | Dot net | ![45%](https://progress-bar.dev/45)         
