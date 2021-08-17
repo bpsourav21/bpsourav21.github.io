@@ -44,7 +44,7 @@ Photoshop | ![65%](https://progress-bar.dev/65)        | Illustrator | ![40%](ht
 ### BOND TECHNOLOGIES
 **Software Engineer (1st January, 2017 to 31 June 2018)**
 - Cashier Lite (React Native + Redux + PouchDb)
-- Binder ERP Soluons (React + Redux + Nodejs + MongoDB + CouchDB + UI/UX)
+- Binder ERP Solutions (React + Redux + Nodejs + MongoDB + CouchDB + UI/UX)
 - Edith Cafe Restaurant POS (React Nave + Redux + PouchDb + CouchDB + Nodejs)
  
 ### RT SOFTBD
