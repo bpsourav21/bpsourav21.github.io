@@ -13,7 +13,8 @@ Option                                                                          
 
 Technology  | level                                    | Technology | level
 ----| ---                                              | --- | ---
-React JS | ![90%](https://progress-bar.dev/90)         | React Native | ![80](https://progress-bar.dev/80)      
+React JS | ![90%](https://progress-bar.dev/90)         | React Native | ![80](https://progress-bar.dev/80)
+NEXT JS | ![60%](https://progress-bar.dev/60)          | Taillwind CSS | ![40](https://progress-bar.dev/40)   
 Redux | ![70%](https://progress-bar.dev/70)            | Mobx | ![75%](https://progress-bar.dev/75)         
 Typescript | ![90%](https://progress-bar.dev/90)       | Javascript | ![70%](https://progress-bar.dev/70)         
 Node JS | ![50%](https://progress-bar.dev/50)          | C/C++ | ![50%](https://progress-bar.dev/50)        
