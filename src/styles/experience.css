@@ -1,0 +1,15 @@
+.experience-page {
+  padding: 2rem 0;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .experience-list {
+    gap: 1.5rem;
+  }
+}
