@@ -1,91 +1,122 @@
-"use client"
+"use client";
 
-import { useEffect, useRef, useState } from "react"
-import { Code, Palette, Users, Zap } from "lucide-react"
+import { useEffect, useRef, useState } from "react";
+import { Code, Palette, Users, Zap } from "lucide-react";
 
 export default function About() {
-  const [isVisible, setIsVisible] = useState(false)
-  const sectionRef = useRef<HTMLElement>(null)
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true)
+          setIsVisible(true);
         }
       },
-      { threshold: 0.3 },
-    )
+      { threshold: 0.3 }
+    );
 
     if (sectionRef.current) {
-      observer.observe(sectionRef.current)
+      observer.observe(sectionRef.current);
     }
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   const features = [
     {
       icon: Code,
       title: "Full-Stack Development",
-      description: "Building end-to-end solutions with modern frameworks and best practices.",
+      description:
+        "Building end-to-end solutions with modern frameworks and best practices.",
       gradient: "from-blue-500 to-cyan-500",
     },
     {
       icon: Palette,
       title: "UI/UX Excellence",
-      description: "Crafting beautiful, intuitive interfaces that users love to interact with.",
+      description:
+        "Crafting beautiful, intuitive interfaces that users love to interact with.",
       gradient: "from-purple-500 to-pink-500",
     },
     {
       icon: Zap,
       title: "Performance Optimization",
-      description: "Delivering lightning-fast applications with superior user experience.",
+      description:
+        "Delivering lightning-fast applications with superior user experience.",
       gradient: "from-green-500 to-emerald-500",
     },
     {
       icon: Users,
       title: "Team Leadership",
-      description: "Leading cross-functional teams and mentoring developers to achieve excellence.",
+      description:
+        "Leading cross-functional teams and mentoring developers to achieve excellence.",
       gradient: "from-orange-500 to-red-500",
     },
-  ]
+  ];
 
   return (
-    <section id="about" ref={sectionRef} className="py-20 bg-white dark:bg-gray-900">
+    <section
+      id="about"
+      ref={sectionRef}
+      className="py-20 bg-white dark:bg-gray-900"
+    >
       <div className="max-w-6xl mx-auto px-6">
         <div
           className={`text-center mb-16 transform transition-all duration-1000 ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}
         >
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">About Me</h2>
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            About Me
+          </h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div
             className={`space-y-6 transform transition-all duration-1000 ${
-              isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"
+              isVisible
+                ? "translate-x-0 opacity-100"
+                : "-translate-x-10 opacity-0"
             }`}
           >
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Professional Summary</h3>
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+              Professional Summary
+            </h3>
             <p className="text-gray-700 dark:text-gray-400 leading-relaxed">
-              Versatile and results-driven full-stack web developer with a strong emphasis on frontend architecture,
-              experimentation platforms, and performance optimization. Proven track record of leading cross-functional
-              initiatives, mentoring junior developers, and collaborating closely with product teams to deliver
-              high-impact, scalable solutions.
+              Results-oriented Software Engineer with many years of progressive
+              experience in full-stack web and mobile development, specializing
+              in e-commerce, SaaS, and enterprise applications. Highly skilled
+              in React.js, React Native, Typescript, Node.js, F#, C#, .NET Core,
+              and a variety of modern frameworks and databases. Demonstrates
+              strong proficiency in both frontend and backend engineering, UI/UX
+              design, and agile methodologies.
             </p>
             <p className="text-gray-700 dark:text-gray-400 leading-relaxed">
-              Passionate about building intuitive user experiences, evolving robust engineering practices, and
-              contributing to product strategy in fast-paced, innovation-driven environments. Seeking a
-              leadership-oriented role where technical expertise and product thinking converge to drive business growth.
+              Proven track record of delivering robust, scalable solutions for
+              high-traffic platforms. Adept at building and maintaining complex,
+              feature-rich applications, integrating diverse payment gateways,
+              and optimizing system performance. Recognized for mentoring junior
+              developers, driving code quality through rigorous reviews, and
+              collaborating closely with product and QA teams to exceed client
+              expectations.
+            </p>
+            <p className="text-gray-700 dark:text-gray-400 leading-relaxed">
+              Experienced in project leadership, requirement analysis, and
+              strategic planning—successfully managed and contributed to
+              multiple high-impact projects, including e-commerce platforms,
+              donation systems, voting applications, and POS solutions.
+              Passionate about continuous learning, open-source contribution,
+              and leveraging technology to solve real-world problems.
             </p>
           </div>
 
           <div
             className={`grid grid-cols-1 sm:grid-cols-2 gap-6 transform transition-all duration-1000 ${
-              isVisible ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"
+              isVisible
+                ? "translate-x-0 opacity-100"
+                : "translate-x-10 opacity-0"
             }`}
           >
             {features.map((feature, index) => (
@@ -102,7 +133,9 @@ export default function About() {
                 <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                   {feature.title}
                 </h4>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{feature.description}</p>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  {feature.description}
+                </p>
               </div>
             ))}
           </div>
@@ -118,11 +151,13 @@ export default function About() {
               <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">
                 {stat.number}
               </div>
-              <div className="text-sm text-gray-600 dark:text-gray-400 font-medium mt-1">{stat.label}</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400 font-medium mt-1">
+                {stat.label}
+              </div>
             </div>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }
