@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import ThemeProvider from "@/src/components/ThemeProvider"
+import ThemeProvider from "@/src/providers/ThemeProvider"
 import Header from "@/src/components/Header"
 import Hero from "@/src/components/Hero"
 import About from "@/src/components/About"

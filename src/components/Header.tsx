@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { Menu, X, Sun, Moon } from "lucide-react"
-import { useTheme } from "./ThemeProvider"
+import { useTheme } from "../providers/ThemeProvider"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
