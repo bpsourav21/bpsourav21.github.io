@@ -26,30 +26,18 @@ export default function Skills() {
   const skillCategories = [
     {
       title: "Frontend",
-      skills: [
-        { name: "React", level: 95 },
-        { name: "TypeScript", level: 90 },
-        { name: "Next.js", level: 88 },
-        { name: "React Native", level: 85 },
-      ],
+      skills: ["React", "TypeScript", "Next.js", "React Native"],
+      color: "from-blue-400 to-blue-600",
     },
     {
       title: "Backend",
-      skills: [
-        { name: "Node.js", level: 85 },
-        { name: "Python", level: 80 },
-        { name: "C#/.NET", level: 75 },
-        { name: "SQL", level: 88 },
-      ],
+      skills: ["Node.js", "Python", "C#/.NET", "SQL"],
+      color: "from-green-400 to-green-600",
     },
     {
       title: "Tools & Others",
-      skills: [
-        { name: "Git", level: 90 },
-        { name: "Azure", level: 80 },
-        { name: "MongoDB", level: 85 },
-        { name: "Redis", level: 75 },
-      ],
+      skills: ["Git", "Azure", "MongoDB", "Redis"],
+      color: "from-red-400 to-red-600",
     },
   ]
 
@@ -90,7 +78,11 @@ export default function Skills() {
   ]
 
   return (
-    <section id="skills" ref={sectionRef} className="py-20 bg-gray-50">
+    <section
+      id="skills"
+      ref={sectionRef}
+      className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50/30 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900/30 transition-all duration-500"
+    >
       <div className="max-w-6xl mx-auto px-6">
         <div
           className={`text-center mb-16 transform transition-all duration-1000 ${
@@ -102,34 +94,42 @@ export default function Skills() {
         </div>
 
         {/* Skill Progress Bars */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {skillCategories.map((category, categoryIndex) => (
             <div
               key={categoryIndex}
-              className={`bg-white p-6 rounded-lg shadow-lg transform transition-all duration-1000 ${
+              className={`group relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-3xl shadow-xl hover:shadow-2xl dark:hover:shadow-blue-500/20 border border-gray-200/50 dark:border-gray-700/50 transform transition-all duration-700 hover:-translate-y-4 hover:rotate-1 ${
                 isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
               }`}
               style={{ transitionDelay: `${categoryIndex * 200}ms` }}
             >
-              <h3 className="text-xl font-bold text-gray-900 mb-6">{category.title}</h3>
-              <div className="space-y-4">
-                {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex}>
-                    <div className="flex justify-between mb-2">
-                      <span className="text-gray-700 font-medium">{skill.name}</span>
-                      <span className="text-blue-600 font-medium">{skill.level}%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
-                      <div
-                        className="bg-gradient-to-r from-blue-500 to-blue-600 h-2 rounded-full transition-all duration-1000 ease-out"
-                        style={{
-                          width: isVisible ? `${skill.level}%` : "0%",
-                          transitionDelay: `${categoryIndex * 200 + skillIndex * 100 + 500}ms`,
-                        }}
-                      ></div>
-                    </div>
+              {/* Gradient overlay */}
+              <div
+                className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-0 group-hover:opacity-5 rounded-3xl transition-opacity duration-500`}
+              ></div>
+
+              <div className="relative z-10">
+                <div className="mb-8">
+                  <div
+                    className={`w-20 h-20 bg-gradient-to-r ${category.color} rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-lg`}
+                  >
+                    <span className="text-3xl font-bold text-white">{category.title.charAt(0)}</span>
                   </div>
-                ))}
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+                    {category.title}
+                  </h3>
+                </div>
+
+                <div className="flex flex-wrap gap-3">
+                  {category.skills.map((skill, skillIndex) => (
+                    <span
+                      key={skillIndex}
+                      className="px-4 py-2 bg-gray-100 dark:bg-gray-700/50 text-gray-700 dark:text-gray-300 rounded-xl text-sm font-medium hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 hover:text-white dark:hover:text-white transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 cursor-default shadow-sm"
+                    >
+                      {skill}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           ))}
