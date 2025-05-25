@@ -11,9 +11,11 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import ResumePopup from "./resume/ResumePopup";
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false);
+  const [isResumePopupOpen, setIsResumePopupOpen] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -30,6 +32,10 @@ export default function Hero() {
 
   const scrollToAbout = () => {
     document.getElementById("about")?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const closeResumePopup = () => {
+    setIsResumePopupOpen(false);
   };
 
   return (
@@ -116,13 +122,13 @@ export default function Hero() {
                 />
               </button>
 
-              <Link
-                href="/resume"
+              <button
+                onClick={() => setIsResumePopupOpen(true)}
                 className="group px-8 py-4 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-xl hover:border-blue-600 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
               >
                 <Images size={20} />
                 <span>Resume</span>
-              </Link>
+              </button>
             </div>
 
             {/* Social Links */}
@@ -203,6 +209,8 @@ export default function Hero() {
           </button>
         </div>
       </div>
+      {/* resume pop up block */}
+      {isResumePopupOpen && <ResumePopup closeResumePopup={closeResumePopup} />}
     </section>
   );
 }

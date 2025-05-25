@@ -1,26 +1,31 @@
-"use client"
+"use client";
 
-import { useEffect, useState } from "react"
-import ThemeProvider from "@/src/providers/ThemeProvider"
-import Header from "@/src/components/Header"
-import Hero from "@/src/components/Hero"
-import About from "@/src/components/About"
-import Skills from "@/src/components/Skills"
-import Experience from "@/src/components/Experience"
-import Projects from "@/src/components/Projects"
-import Contact from "@/src/components/Contact"
-import Footer from "@/src/components/Footer"
+import { useEffect, useState } from "react";
+import ThemeProvider from "@/src/providers/ThemeProvider";
+import Header from "@/src/components/Header";
+import Hero from "@/src/components/Hero";
+import About from "@/src/components/About";
+import Skills from "@/src/components/Skills";
+import Experience from "@/src/components/Experience";
+import Projects from "@/src/components/Projects";
+import Contact from "@/src/components/Contact";
+import Footer from "@/src/components/Footer";
+import ResumePopup from "../components/resume/ResumePopup";
 
 export default function Home() {
-  const [isLoaded, setIsLoaded] = useState(false)
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
-    setIsLoaded(true)
-  }, [])
+    setIsLoaded(true);
+  }, []);
 
   return (
     <ThemeProvider>
-      <div className={`min-h-screen transition-opacity duration-1000 ${isLoaded ? "opacity-100" : "opacity-0"}`}>
+      <div
+        className={`min-h-screen transition-opacity duration-1000 ${
+          isLoaded ? "opacity-100" : "opacity-0"
+        }`}
+      >
         <Header />
         <main>
           <Hero />
@@ -33,5 +38,5 @@ export default function Home() {
         <Footer />
       </div>
     </ThemeProvider>
-  )
+  );
 }
