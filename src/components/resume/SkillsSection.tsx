@@ -1,38 +1,7 @@
+import data from "@/src/lib/data";
+
 export default function SkillsSection() {
-  const skillsByGroup = {
-    group1: [
-      "React",
-      "React-Native",
-      "Expo",
-      "TypeScript",
-      "JavaScript",
-      "Next.js",
-      "Node.js",
-      "C#",
-      "F#",
-      "Dotnet",
-      "Python",
-    ],
-    group2: ["Redux", "Zustand", "Mobx"],
-    group3: [
-      "SQL",
-      "Postgres",
-      "MongoDB",
-      "CouchDB",
-      "PouchDB",
-      "Neon",
-      "Prisma",
-      "Redis",
-    ],
-    group4: ["Tailwind", "Bootstrap", "Figma", "Adobe XD", "Shadcn", "Axiom"],
-    group5: [
-      "Analytics",
-      "Kusto Query",
-      "Git",
-      "Azure",
-      "Google Cloud Platform",
-    ],
-  };
+  const skillsByGroup = data.SkillsSection.skillsByGroup;
 
   return (
     <div>

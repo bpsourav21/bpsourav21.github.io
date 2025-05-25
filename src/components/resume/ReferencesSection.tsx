@@ -1,18 +1,7 @@
+import data from "@/src/lib/data";
+
 export default function ReferencesSection() {
-  const references = [
-    {
-      name: "Keith Treu",
-      title: "Director, Software Engineering",
-      company: "Optimizely",
-      email: "keith.treu@optimizely.com",
-    },
-    {
-      name: "Tejas Viswanath",
-      title: "CTO & Founder",
-      company: "Chaldal Limited",
-      email: "tejas@chaldal.net",
-    },
-  ];
+  const references = data.ReferencesSection.references;
 
   return (
     <div>

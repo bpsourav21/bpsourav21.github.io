@@ -1,0 +1,270 @@
+import { link } from "fs";
+import ProfileSection from "../components/ProfileSection";
+
+const data = {
+  ProfileSection: {
+    name: "MAHADI HASAN SOURAV",
+    profilePic: "/propic2.jpg",
+    contactInfo: {
+      phone: "+8801671820025",
+      email: "bpsourav21@gmail.com",
+      linkedin: "https://www.linkedin.com/in/bpsourav21",
+      github: "https://github.com/bpsourav21",
+      website: "https://bpsourav21.github.io",
+    },
+  },
+  EducationSection: {
+    educations: [
+      {
+        degree: "BSC Engineering, Computer Science & Engineering",
+        institution: "Rajshahi University of Engineering & Technology",
+        period: "01/2012 - 12/2016",
+        location: "Rajshahi",
+        gpa: "3.15",
+        scale: "4.0",
+      },
+      {
+        degree: "Higher-Secondary School Certificate, Science",
+        institution: "Notre Dame College, Dhaka",
+        period: "01/2009 - 12/2011",
+        location: "Dhaka",
+        gpa: "5.0",
+        scale: "5.0",
+      },
+      {
+        degree: "Secondary School Certificate, Science",
+        institution: "Motijheel Govt Boys' High School",
+        period: "01/2000 - 12/2009",
+        location: "Dhaka",
+        gpa: "5.0",
+        scale: "5.0",
+      },
+    ],
+  },
+  ExperienceSection: {
+    experiences: [
+      {
+        title: "Software Engineer II",
+        company: "Optimizely",
+        period: "10/2024 - Present",
+        location: "Dhaka, Bangladesh",
+        description: "Digital Experience Platform (DXP)",
+        responsibilities: [
+          "Developed and maintained high-performance, user-focused frontend features for Optimizely's experimentation and personalization platform such as A/B test, PersonalizationCampaign, Multi ArmedBandit, MultiVariatetests etc using React, Nuclear JS, Python, Webpack and TypeScript.",
+          "Partnered with product managers and designers to rapidly prototype and ship A/B testing UI components, ensuring accessibility and responsiveness across devices.",
+          "Created reusable UI libraries and internal tools that improved frontend developer velocity and consistency across teams.",
+          "Optimized performance for large-scale experimentation dashboards, reducing initial load time by 35% through lazy-loading strategies and memoization.",
+          "Championed testing best practices with comprehensive unit and integration test coverage using Mocha, Chai, Sinon, and Enzyme.",
+          "Contributed to resolve vulnerabilities, internal documentation and on boarding materials to support knowledge sharing and team growth",
+        ],
+      },
+      {
+        title: "Software Engineer (level-3)",
+        company: "Chaldal Limited",
+        period: "10/2018 - 10/2024",
+        location: "Dhaka, Bangladesh",
+        description: "Online Grocery E-commerce",
+        responsibilities: [
+          "Wrote clean and dynamic code, leveraging expertise across multiple programming languages such as React, React-Native, Redux, Mobx, Node js, C#, F#, Dot net, SQL etc. to meet diverse requirements.",
+          "Kept pace with changing coding standards and requirements and maintained updated software.",
+          "Evaluated project requirements, identified challenges and proposed alternatives using research and data.",
+          "Contributed to sprint planning, prioritizing backlogs to meet new demands",
+          "Exceeded client expectations for software function, performance and features by working closely with product and quality assurance teams.",
+          "Developed testable software using agile methodologies to create high-quality deliverables.",
+          "Built and maintained code libraries used to produce consistent and reliable code within expected timeframe.",
+        ],
+      },
+      {
+        title: "Frontend Developer (Contractual - Remote)",
+        company: "Pattern Technologies",
+        period: "04/2023 - 11/2023",
+        location: "Lahore, Pakistan",
+        description: "Online Food Service",
+        responsibilities: [
+          "Participated in pre-project analysis and technical assessments to validate creation of user-friendly interface.",
+          "Built reusable code to utilize for other projects and to minimize costs.",
+          "Designed layout and graphics to enhance aesthetics and appearance of the app.",
+          "Managed project and web strategic planning for entire team.",
+          "Responded to queries on private messages or comments to address issues and resolve complaints",
+        ],
+      },
+      {
+        title: "Software Engineer",
+        company: "Bond Technologies",
+        period: "01/2017 - 06/2018",
+        location: "Dhaka, Bangladesh",
+        description: "POS Service Provider",
+        responsibilities: [
+          "Helped team complete smooth, professional software deployments using React, React React-Native, Node js, Mongo DB, Couch DB, Pouch DB.",
+          "Managed team resources to deliver on sprint goals within expected timeframes.",
+          "Aligned projects with requirements and specifications to deliver above-benchmark results.",
+          "Supported software code review, system integration and validation in line with company and regulatory requirements.",
+          "Built and maintained code libraries used to produce consistent and reliable code.",
+        ],
+      },
+      {
+        title: "Intern Engineer",
+        company: "RT SoftBD",
+        period: "12/2016 - 12/2016",
+        location: "Dhaka, Bangladesh",
+        description: "Website service provider",
+        responsibilities: [
+          "Used to develop website using CodeIgnitor, Javascript, PHP and Mysql.",
+        ],
+      },
+    ],
+  },
+  ProjectsSection: {
+    projects: [
+      {
+        title: "Optimizely Visual Editor",
+        link: null,
+        description: [
+          "A WSYWIG editor that loads user's website and let them adjust the visitor experience for various experiment however they like for app.optimizely.com",
+          "A Micro Front End application build on React, Zustand, webpack.",
+        ],
+      },
+      {
+        title: "MRCS Web App",
+        link: "https://mrcs-web-app.vercel.app",
+        description: [
+          "A platform for MRCS medical exam where a separate admin panel helps organizing questions and results.",
+          "Developed core UI components using NEXT.js, Postgres, Prisma and Neon ensuring high performance and accessibility across browsers.",
+          "Implemented modular state management with Redux to maintain app consistency across user sessions and components.",
+          "Designed and optimized RESTful API interactions for seamless communication.",
+        ],
+      },
+      {
+        title: "Pomodoro Time Counter",
+        link: null,
+        description: [
+          "A React-Native-Expo application that runs on both IOS and Android",
+          "Helps to focus using different countdown with breaks",
+          "Lucrative report and UI for users",
+        ],
+      },
+      {
+        title: "Pattern the App",
+        link: "https://thepattern.app",
+        description: [
+          "Contributed on creating dynamic components and animated UI",
+          "Developed several features including cart grouping, addons, rewards, login, geolocation capture, FB SDK integration etc.",
+        ],
+      },
+      {
+        title: "Chaldal website",
+        link: "https://chaldal.com",
+        description: [
+          "Developed with ReactJS, Node JS, Typesctipt, SQL, Dotnet Core, C#, F#, SQL, Service Fabric",
+          "Contributed most of the new features like Mulcity support, Address updation, Chaldal Credit, Recipes, Donation, Refund, Due payment, Geolocation etc.",
+        ],
+      },
+      {
+        title: "Chaldal App, IOS & Android",
+        link: null,
+        description: [
+          "Developed with React Native, Mobx, Typescript",
+          "Used advanced features like deep linking, push notification, geolocation, camera access etc.",
+          "Used advanced user interface features like animated tab bar, animated header, animated bottom sheet etc.",
+          "Both apps are available in respective stores",
+        ],
+      },
+      {
+        title: "Chaldal Vegetable Network",
+        link: "https://cdvn.chaldal.com",
+        description: [
+          "The Chaldal Vegetable Network is a valuable initiative that aims to empower farmers and consumers, promote sustainable agriculture, and contribute to food security in the region.",
+          "Features include farmer registration, product listing, order management, and payment processing.",
+          "The app provides a seamless experience for both farmers and consumers, promoting sustainable agriculture and fair trade practices.",
+          "Developed with F#, React, Redux, React-Native, SQL, Liquibase",
+        ],
+      },
+      {
+        title: "Chaldal Food Aid",
+        link: "https://chaldal.com/food-aid",
+        description: [
+          "Chaldal Food Aid is a platform that allows users to donate food items to those in need, supporting the community and promoting social responsibility.",
+          "Features include food item listing, donation tracking, and user authentication.",
+          "The app provides a user-friendly interface for donors to contribute food items and track their donations.",
+          "Developed with React, Redux, F#, SQL",
+        ],
+      },
+      {
+        title: "Chaldal Voting System",
+        link: "https://voting.chaldal.com",
+        description: [
+          "It's an internal voting system for Chaldal employees to vote for various purposes like employee of the month, project selection etc.",
+          "Features include user authentication, voting management, and result tracking.",
+          "The app provides a secure and efficient platform for employees to participate in voting processes.",
+          "Developed with React, Redux, F#, Postgres",
+        ],
+      },
+    ],
+  },
+  SkillsSection: {
+    skillsByGroup: {
+      group1: [
+        "React",
+        "React-Native",
+        "Expo",
+        "TypeScript",
+        "JavaScript",
+        "Next.js",
+        "Node.js",
+        "C#",
+        "F#",
+        "Dotnet",
+        "Python",
+      ],
+      group2: ["Redux", "Zustand", "Mobx"],
+      group3: [
+        "SQL",
+        "Postgres",
+        "MongoDB",
+        "CouchDB",
+        "PouchDB",
+        "Neon",
+        "Prisma",
+        "Redis",
+      ],
+      group4: ["Tailwind", "Bootstrap", "Figma", "Adobe XD", "Shadcn", "Axiom"],
+      group5: [
+        "Analytics",
+        "Kusto Query",
+        "Git",
+        "Azure",
+        "Google Cloud Platform",
+      ],
+    },
+  },
+  SummarySection: {
+    summary: `Versatile and results-driven full-stack web developer with a strong emphasis on frontend architecture,
+        experimentation platforms, and performance optimization. Proven track record of leading cross-functional
+        initiatives, mentoring junior developers, and collaborating closely with product teams to deliver high-impact,
+        scalable solutions. Passionate about building intuitive user experiences, evolving robust engineering practices,
+        and contributing to product strategy in fast-paced, innovation-driven environments. Seeking a
+        leadership-oriented role where technical expertise and product thinking converge to drive business growth.`,
+    professionalSummary: {
+      section1: `Results-oriented Software Engineer with many years of progressive experience in full-stack web and mobile development, specializing in e-commerce, SaaS, and enterprise applications. Highly skilled in React.js, React Native, Typescript, Node.js, F#, C#, .NET Core, and a variety of modern frameworks and databases. Demonstrates strong proficiency in both frontend and backend engineering, UI/UX design, and agile methodologies.`,
+      section2: `Proven track record of delivering robust, scalable solutions for high-traffic platforms. Adept at building and maintaining complex, feature-rich applications, integrating diverse payment gateways, and optimizing system performance. Recognized for mentoring junior developers, driving code quality through rigorous reviews, and collaborating closely with product and QA teams to exceed client expectations.`,
+      section3: `Experienced in project leadership, requirement analysis, and strategic planning—successfully managed and contributed to multiple high-impact projects, including e-commerce platforms, donation systems, voting applications, and POS solutions. Passionate about continuous learning, open-source contribution, and leveraging technology to solve real-world problems.`,
+    },
+  },
+  ReferencesSection: {
+    references: [
+      {
+        name: "Keith Treu",
+        title: "Director, Software Engineering",
+        company: "Optimizely",
+        email: "keith.treu@optimizely.com",
+      },
+      {
+        name: "Tejas Viswanath",
+        title: "CTO & Founder",
+        company: "Chaldal Limited",
+        email: "tejas@chaldal.net",
+      },
+    ],
+  },
+};
+export default data;

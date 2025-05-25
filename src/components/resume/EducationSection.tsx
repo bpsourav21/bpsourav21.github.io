@@ -1,32 +1,8 @@
-import { MapPin, Calendar } from "lucide-react";
+import data from "@/src/lib/data";
+import { Calendar, MapPin } from "lucide-react";
 
 export default function EducationSection() {
-  const education = [
-    {
-      degree: "BSC Engineering, Computer Science & Engineering",
-      institution: "Rajshahi University of Engineering & Technology",
-      period: "01/2012 - 12/2016",
-      location: "Rajshahi",
-      gpa: "3.15",
-      scale: "4.0",
-    },
-    {
-      degree: "Higher-Secondary School Certificate, Science",
-      institution: "Notre Dame College, Dhaka",
-      period: "01/2009 - 12/2011",
-      location: "Dhaka",
-      gpa: "5.0",
-      scale: "5.0",
-    },
-    {
-      degree: "Secondary School Certificate Science",
-      institution: "Motijheel Govt Boys' High School",
-      period: "01/2000 - 12/2009",
-      location: "Dhaka",
-      gpa: "5.0",
-      scale: "5.0",
-    },
-  ];
+  const educations = data.EducationSection.educations;
 
   return (
     <div className="mt-8 grid grid-cols-1 gap-8">
@@ -35,7 +11,7 @@ export default function EducationSection() {
           EDUCATION
         </h2>
         <div className="space-y-4">
-          {education.map((edu, index) => (
+          {educations.map((edu, index) => (
             <div
               key={index}
               className="border-b border-gray-200 pb-3 last:border-b-0"
@@ -45,7 +21,7 @@ export default function EducationSection() {
                   <h3 className="font-bold text-blue-900 text-md">
                     {edu.degree}
                   </h3>
-                  <p className="text-sm font-bold text-blue-900 mb-1">
+                  <p className="text-sm font-bold text-gray-900 mb-1">
                     {edu.institution}
                   </p>
                   <div className="flex items-center gap-1 text-xs text-gray-600">
