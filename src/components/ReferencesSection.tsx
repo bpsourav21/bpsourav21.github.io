@@ -16,11 +16,11 @@ export default function ReferencesSection() {
 
   return (
     <div>
-      <h2 className="text-lg font-bold text-blue-900 uppercase border-b border-gray-300 pb-1 mb-3">References</h2>
+      <h2 className="text-lg font-bold text-primary uppercase border-b border-gray-300 pb-1 mb-3">References</h2>
       <div className="space-y-4">
         {references.map((ref, index) => (
-          <div key={index} className="pb-3 border-b border-gray-200 last:border-b-0 last:pb-0">
-            <h3 className="font-bold text-blue-900 text-sm">{ref.name}</h3>
+          <div key={index} className="pb-3 border-b border-secondary last:border-b-0 last:pb-0">
+            <h3 className="font-bold text-primary text-sm">{ref.name}</h3>
             <p className="text-xs">{ref.title}</p>
             <p className="text-xs">{ref.company}</p>
             <p className="text-xs text-blue-600">

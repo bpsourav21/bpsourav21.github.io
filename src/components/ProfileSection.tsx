@@ -5,7 +5,7 @@ export default function ProfileSection() {
   return (
     <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
       <div className="flex-1">
-        <h1 className="text-2xl md:text-3xl font-bold text-blue-900 mb-4">MAHADI HASAN SOURAV</h1>
+        <h1 className="text-2xl md:text-3xl font-bold text-primary mb-4">MAHADI HASAN SOURAV</h1>
         <div className="space-y-2">
           <div className="flex items-center gap-3 text-sm">
             <Phone size={16} className="text-blue-600 flex-shrink-0" />

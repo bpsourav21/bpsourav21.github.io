@@ -86,7 +86,7 @@ export default function Hero() {
                 <br />
               </h1>
 
-              <p className="text-xl text-gray-600 dark:text-gray-300 font-bold leading-relaxed max-w-lg">
+              <p className="text-xl text-secondary dark:text-gray-300 font-bold leading-relaxed max-w-lg">
                 Full-Stack Software Engineer
               </p>
               <p className="text-gray-700 dark:text-gray-400 leading-relaxed">
@@ -124,7 +124,7 @@ export default function Hero() {
 
               <button
                 onClick={() => setIsResumePopupOpen(true)}
-                className="group px-8 py-4 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 rounded-xl hover:border-blue-600 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
+                className="group px-8 py-4 border-2 border-gray-300 dark:border-primary text-gray-700 dark:text-gray-300 rounded-xl hover:border-blue-600 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2"
               >
                 <Images size={20} />
                 <span>Resume</span>
@@ -185,12 +185,12 @@ export default function Hero() {
               </div>
 
               {/* Floating Badges */}
-              <div className="absolute -top-4 -right-4 bg-white dark:bg-gray-800 px-4 py-2 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 animate-float">
+              <div className="absolute -top-4 -right-4 bg-white dark:bg-gray-800 px-4 py-2 rounded-xl shadow-lg border border-secondary dark:border-gray-700 animate-float">
                 <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">
                   6+ Years
                 </span>
               </div>
-              <div className="absolute -bottom-4 -left-4 bg-white dark:bg-gray-800 px-4 py-2 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 animate-float animation-delay-1000">
+              <div className="absolute -bottom-4 -left-4 bg-white dark:bg-gray-800 px-4 py-2 rounded-xl shadow-lg border border-secondary dark:border-gray-700 animate-float animation-delay-1000">
                 <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">
                   50+ Projects
                 </span>

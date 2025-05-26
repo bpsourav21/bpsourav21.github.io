@@ -37,7 +37,7 @@ export default function SkillsSection() {
 
   return (
     <div>
-      <h2 className="text-lg font-bold text-blue-900 uppercase border-b border-gray-300 pb-1 mb-3">Skills</h2>
+      <h2 className="text-lg font-bold text-primary uppercase border-b border-gray-300 pb-1 mb-3">Skills</h2>
       <div className="grid grid-cols-2 gap-1.5">
         {skills.map((skill, index) => (
           <div

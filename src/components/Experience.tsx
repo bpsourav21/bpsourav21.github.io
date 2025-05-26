@@ -107,7 +107,7 @@ export default function Experience() {
 
                 {/* Enhanced Content Card */}
                 <div className="flex-1 group">
-                  <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-3xl border border-gray-200/50 dark:border-gray-700/50 hover:border-transparent hover:shadow-2xl dark:hover:shadow-blue-500/20 transition-all duration-500 transform hover:scale-[1.02] hover:-translate-y-2">
+                  <div className="bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-3xl border border-secondary/50 dark:border-gray-700/50 hover:border-transparent hover:shadow-2xl dark:hover:shadow-blue-500/20 transition-all duration-500 transform hover:scale-[1.02] hover:-translate-y-2">
                     {/* Company badge */}
                     <div className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full text-sm font-medium mb-6 shadow-lg">
                       <Building size={16} className="mr-2" />
@@ -119,14 +119,14 @@ export default function Experience() {
                         <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                           {exp.title}
                         </h3>
-                        <p className="text-gray-600 dark:text-gray-400 italic mb-4 text-lg">{exp.description}</p>
+                        <p className="text-secondary dark:text-gray-400 italic mb-4 text-lg">{exp.description}</p>
                       </div>
                       <div className="lg:text-right space-y-3 lg:ml-6">
-                        <div className="flex items-center space-x-2 text-gray-600 dark:text-gray-400">
+                        <div className="flex items-center space-x-2 text-secondary dark:text-gray-400">
                           <Calendar size={16} />
                           <span className="font-medium">{exp.period}</span>
                         </div>
-                        <div className="flex items-center space-x-2 text-gray-600 dark:text-gray-400">
+                        <div className="flex items-center space-x-2 text-secondary dark:text-gray-400">
                           <MapPin size={16} />
                           <span>{exp.location}</span>
                         </div>

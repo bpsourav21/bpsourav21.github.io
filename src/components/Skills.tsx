@@ -98,7 +98,7 @@ export default function Skills() {
           {skillCategories.map((category, categoryIndex) => (
             <div
               key={categoryIndex}
-              className={`group relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-3xl shadow-xl hover:shadow-2xl dark:hover:shadow-blue-500/20 border border-gray-200/50 dark:border-gray-700/50 transform transition-all duration-700 hover:-translate-y-4 hover:rotate-1 ${
+              className={`group relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-3xl shadow-xl hover:shadow-2xl dark:hover:shadow-blue-500/20 border border-secondary/50 dark:border-gray-700/50 transform transition-all duration-700 hover:-translate-y-4 hover:rotate-1 ${
                 isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
               }`}
               style={{ transitionDelay: `${categoryIndex * 200}ms` }}

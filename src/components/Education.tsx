@@ -104,7 +104,7 @@ export default function Education() {
                       </div>
                     </div>
                   </div>
-                  <div className="flex flex-col sm:flex-row sm:justify-between text-sm text-gray-600">
+                  <div className="flex flex-col sm:flex-row sm:justify-between text-sm text-secondary">
                     <div className="flex items-center mb-1 sm:mb-0">
                       <Calendar size={14} className="mr-1" />
                       {edu.period}

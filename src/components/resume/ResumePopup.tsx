@@ -11,7 +11,7 @@ export default function ResumePopup({
       <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-10 w-full h-full relative">
         <button
           onClick={closeResumePopup}
-          className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
+          className="absolute top-2 right-2 text-secondary hover:text-secondary dark:hover:text-gray-300"
         >
           <XIcon />
         </button>

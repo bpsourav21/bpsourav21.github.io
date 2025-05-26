@@ -6,31 +6,31 @@ export default function ProjectsSection() {
 
   return (
     <div className="mt-8">
-      <h2 className="text-md font-bold text-blue-900 mb-4 border-b border-gray-300 pb-2">
+      <h2 className="text-md font-bold text-primary mb-4 border-b border-primary pb-2">
         PROJECTS
       </h2>
       <div className="grid grid-cols-1 gap-4">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="border-b last:border-b-0 border-gray-200 pb-4"
+            className="border-b last:border-b-0 border-secondary pb-4"
           >
-            <h3 className="flex items-center font-bold text-blue-900 text-md mb-2">
+            <h3 className="flex items-center font-bold text-primary text-md mb-2">
               {project.title}
               {project.link && (
-                <span className="text-xs text-blue-600 ml-2">
+                <span className="text-xs text-primary ml-2">
                   <a
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-600"
+                    className="text-primary"
                   >
                     <Link size={12} />
                   </a>
                 </span>
               )}
             </h3>
-            <ul className="list-disc list-inside text-sm text-gray-600 space-y-1 ml-2">
+            <ul className="list-disc list-bullet text-sm space-y-1 ml-4">
               {project.description.map((desc, descIndex) => (
                 <li key={descIndex}>{desc}</li>
               ))}

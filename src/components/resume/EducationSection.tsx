@@ -7,24 +7,24 @@ export default function EducationSection() {
   return (
     <div className="mt-8 grid grid-cols-1 gap-8">
       <div>
-        <h2 className="text-md font-bold text-blue-900 mb-4 border-b border-gray-300 pb-2">
+        <h2 className="text-md font-bold text-primary mb-4 border-b border-primary pb-2">
           EDUCATION
         </h2>
         <div className="space-y-4">
           {educations.map((edu, index) => (
             <div
               key={index}
-              className="border-b border-gray-200 pb-3 last:border-b-0"
+              className="border-b border-secondary pb-3 last:border-b-0"
             >
               <div className="flex justify-between items-start">
                 <div className="flex-1">
-                  <h3 className="font-bold text-blue-900 text-md">
+                  <h3 className="font-bold text-primary text-md">
                     {edu.degree}
                   </h3>
-                  <p className="text-sm font-bold text-gray-900 mb-1">
+                  <p className="text-sm font-bold text-secondary mb-1">
                     {edu.institution}
                   </p>
-                  <div className="flex items-center gap-1 text-xs text-gray-600">
+                  <div className="flex items-center gap-1 text-xs text-secondary">
                     <div className="flex items-center gap-1 mb-1">
                       <Calendar size={12} />
                       <span>{edu.period}</span>
@@ -37,9 +37,9 @@ export default function EducationSection() {
                 </div>
                 <div className="text-right ml-4">
                   <div className="flex items-center font-bold gap-1">
-                    <span className="text-md text-gray-400">GPA</span>
+                    <span className="text-md text-secondary">GPA</span>
                   </div>
-                  <div className="font-bold text-blue-900 mb-1">
+                  <div className="font-bold text-primary mb-1">
                     {edu.gpa} / {edu.scale}
                   </div>
                 </div>

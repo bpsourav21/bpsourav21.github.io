@@ -122,7 +122,7 @@ export default function About() {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="group p-8 bg-white dark:bg-gray-800/50 backdrop-blur-sm rounded-3xl border border-gray-200 dark:border-gray-700/50 hover:border-transparent hover:shadow-2xl dark:hover:shadow-blue-500/10 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2"
+                className="group p-8 bg-white dark:bg-gray-800/50 backdrop-blur-sm rounded-3xl border border-secondary dark:border-gray-700/50 hover:border-transparent hover:shadow-2xl dark:hover:shadow-blue-500/10 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2"
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 <div
@@ -133,7 +133,7 @@ export default function About() {
                 <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                   {feature.title}
                 </h4>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                <p className="text-secondary dark:text-gray-300 leading-relaxed">
                   {feature.description}
                 </p>
               </div>
@@ -151,7 +151,7 @@ export default function About() {
               <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">
                 {stat.number}
               </div>
-              <div className="text-sm text-gray-600 dark:text-gray-400 font-medium mt-1">
+              <div className="text-sm text-secondary dark:text-gray-400 font-medium mt-1">
                 {stat.label}
               </div>
             </div>

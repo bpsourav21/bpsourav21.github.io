@@ -101,7 +101,7 @@ export default function Projects() {
           {projects.map((project, index) => (
             <div
               key={index}
-              className={`group relative bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl shadow-xl hover:shadow-2xl dark:hover:shadow-purple-500/20 overflow-hidden border border-gray-200/50 dark:border-gray-700/50 transition-all duration-700 transform hover:-translate-y-6 hover:rotate-1 ${
+              className={`group relative bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl shadow-xl hover:shadow-2xl dark:hover:shadow-purple-500/20 overflow-hidden border border-secondary/50 dark:border-gray-700/50 transition-all duration-700 transform hover:-translate-y-6 hover:rotate-1 ${
                 isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
               }`}
               style={{ transitionDelay: `${index * 150}ms` }}
@@ -142,19 +142,19 @@ export default function Projects() {
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-2 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-xl hover:bg-blue-500 hover:text-white transition-all duration-300 transform hover:scale-110 shadow-lg"
+                        className="p-2 bg-gray-100 dark:bg-gray-700 text-secondary dark:text-gray-300 rounded-xl hover:bg-blue-500 hover:text-white transition-all duration-300 transform hover:scale-110 shadow-lg"
                       >
                         <ExternalLink size={16} />
                       </a>
                     )}
-                    <button className="p-2 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-xl hover:bg-purple-500 hover:text-white transition-all duration-300 transform hover:scale-110 shadow-lg">
+                    <button className="p-2 bg-gray-100 dark:bg-gray-700 text-secondary dark:text-gray-300 rounded-xl hover:bg-purple-500 hover:text-white transition-all duration-300 transform hover:scale-110 shadow-lg">
                       <Github size={16} />
                     </button>
                   </div>
                 </div>
 
                 {/* Project Description */}
-                <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed relative z-10">
+                <p className="text-secondary dark:text-gray-300 mb-6 leading-relaxed relative z-10">
                   {project.description}
                 </p>
 

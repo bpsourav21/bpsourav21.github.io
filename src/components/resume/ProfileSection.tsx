@@ -7,52 +7,52 @@ export default function ProfileSection() {
   return (
     <div className="flex justify-between items-start">
       <div className="flex-1">
-        <h1 className="text-2xl md:text-4xl font-bold text-blue-900 mb-4">
+        <h1 className="text-2xl md:text-4xl font-bold text-primary mb-4">
           {profile.name}
         </h1>
         <div className="grid grid-cols-2">
           <div className="flex flex-wrap items-center gap-3 text-sm">
-            <Phone size={16} className="text-grey-00 flex-shrink-0" />
-            <span className="text-gray-700">{profile.contactInfo.phone}</span>
+            <Phone size={16} className="text-secondary flex-shrink-0" />
+            <span>{profile.contactInfo.phone}</span>
           </div>
           <div className="flex flex-wrap items-center gap-3 text-sm">
-            <Mail size={16} className="text-grey-00 flex-shrink-0" />
+            <Mail size={16} className="text-secondary flex-shrink-0" />
             <a
               href="mailto:bpsourav21@gmail.com"
-              className="text-grey-00 hover:text-blue-800 hover:underline transition-colors"
+              className="hover:underline transition-colors"
             >
               {profile.contactInfo.email}
             </a>
           </div>
           <div className="flex flex-wrap items-center gap-3 text-sm">
-            <Linkedin size={16} className="text-grey-00 flex-shrink-0" />
+            <Linkedin size={16} className="text-secondary flex-shrink-0" />
             <a
               href="https://www.linkedin.com/in/bpsourav21"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-grey-00 hover:text-blue-800 hover:underline transition-colors"
+              className="hover:underline transition-colors"
             >
               {profile.contactInfo.linkedin}
             </a>
           </div>
           <div className="flex flex-wrap items-center gap-3 text-sm">
-            <Github size={16} className="text-grey-00 flex-shrink-0" />
+            <Github size={16} className="text-secondary flex-shrink-0" />
             <a
               href="https://github.com/bpsourav21"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-grey-00 hover:text-blue-800 hover:underline transition-colors"
+              className="hover:underline transition-colors"
             >
               {profile.contactInfo.github}
             </a>
           </div>
           <div className="flex flex-wrap items-center gap-3 text-sm">
-            <Globe size={16} className="text-grey-00 flex-shrink-0" />
+            <Globe size={16} className="text-secondary flex-shrink-0" />
             <a
               href="https://bpsourav21.github.io"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-grey-00 hover:text-blue-800 hover:underline transition-colors"
+              className="hover:underline transition-colors"
             >
               {profile.contactInfo.website}
             </a>
@@ -60,7 +60,7 @@ export default function ProfileSection() {
         </div>
       </div>
       <div className="ml-8">
-        <div className="w-32 h-32 rounded-full overflow-hidden border-2 border-gray-300">
+        <div className="w-32 h-32 rounded-full overflow-hidden border-2 border-secondary">
           <Image
             src={profile.profilePic}
             layout="responsive"

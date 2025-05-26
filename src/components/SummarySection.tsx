@@ -1,7 +1,7 @@
 export default function SummarySection() {
   return (
     <div>
-      <h2 className="text-lg font-bold text-blue-900 uppercase border-b border-gray-300 pb-1 mb-3">Summary</h2>
+      <h2 className="text-lg font-bold text-primary uppercase border-b border-gray-300 pb-1 mb-3">Summary</h2>
       <p className="text-sm leading-relaxed">
         Versatile and results-driven full-stack web developer with a strong emphasis on frontend architecture,
         experimentation platforms, and performance optimization. Proven track record of leading cross-functional

@@ -65,11 +65,11 @@ export default function ProjectsSection() {
 
   return (
     <div>
-      <h2 className="text-lg font-bold text-blue-900 uppercase border-b border-gray-300 pb-1 mb-3">Projects</h2>
+      <h2 className="text-lg font-bold text-primary uppercase border-b border-gray-300 pb-1 mb-3">Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {projects.map((project, index) => (
-          <div key={index} className="border-b border-gray-200 pb-3">
-            <h3 className="font-bold text-blue-900 text-sm">{project.title}</h3>
+          <div key={index} className="border-b border-secondary pb-3">
+            <h3 className="font-bold text-primary text-sm">{project.title}</h3>
             <ul className="mt-1 ml-4 list-disc text-xs space-y-1">
               {project.description.map((desc, descIndex) => (
                 <li key={descIndex}>{desc}</li>

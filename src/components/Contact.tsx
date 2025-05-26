@@ -63,7 +63,7 @@ export default function Contact() {
         >
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto mb-4"></div>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <p className="text-secondary max-w-2xl mx-auto">
             I'm always open to discussing new opportunities, interesting projects, or just having a chat about
             technology.
           </p>
@@ -82,7 +82,7 @@ export default function Contact() {
                 <a
                   key={index}
                   href={item.href}
-                  className="group flex items-center space-x-6 p-6 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl border border-gray-200/50 dark:border-gray-700/50 hover:border-transparent hover:shadow-2xl dark:hover:shadow-blue-500/20 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2"
+                  className="group flex items-center space-x-6 p-6 bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm rounded-2xl border border-secondary/50 dark:border-gray-700/50 hover:border-transparent hover:shadow-2xl dark:hover:shadow-blue-500/20 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2"
                 >
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg">
                     <item.icon className="w-8 h-8 text-white" />
@@ -91,7 +91,7 @@ export default function Contact() {
                     <p className="font-bold text-gray-900 dark:text-white text-lg group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                       {item.label}
                     </p>
-                    <p className="text-gray-600 dark:text-gray-300 group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors duration-300">
+                    <p className="text-secondary dark:text-gray-300 group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors duration-300">
                       {item.text}
                     </p>
                   </div>
@@ -107,7 +107,7 @@ export default function Contact() {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group w-14 h-14 bg-white dark:bg-gray-800 rounded-2xl flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:text-white border border-gray-200 dark:border-gray-700 hover:border-transparent transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg hover:shadow-xl"
+                    className="group w-14 h-14 bg-white dark:bg-gray-800 rounded-2xl flex items-center justify-center text-secondary dark:text-gray-400 hover:bg-gradient-to-r hover:from-blue-600 hover:to-purple-600 hover:text-white border border-secondary dark:border-gray-700 hover:border-transparent transition-all duration-300 transform hover:scale-110 hover:-translate-y-1 shadow-lg hover:shadow-xl"
                   >
                     <social.icon size={24} />
                   </a>
@@ -122,7 +122,7 @@ export default function Contact() {
               isVisible ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"
             }`}
           >
-            <div className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl shadow-2xl p-10 border border-gray-200/50 dark:border-gray-700/50 relative overflow-hidden">
+            <div className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl shadow-2xl p-10 border border-secondary/50 dark:border-gray-700/50 relative overflow-hidden">
               {/* Form background decoration */}
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-full -translate-y-16 translate-x-16"></div>
 
@@ -138,7 +138,7 @@ export default function Contact() {
                       id="name"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-6 py-4 bg-gray-50 dark:bg-gray-700/50 border border-gray-200 dark:border-gray-600 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
+                      className="w-full px-6 py-4 bg-gray-50 dark:bg-gray-700/50 border border-secondary dark:border-primary rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
                       placeholder="Your full name"
                       required
                     />
@@ -155,7 +155,7 @@ export default function Contact() {
                       id="email"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-6 py-4 bg-gray-50 dark:bg-gray-700/50 border border-gray-200 dark:border-gray-600 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
+                      className="w-full px-6 py-4 bg-gray-50 dark:bg-gray-700/50 border border-secondary dark:border-primary rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
                       placeholder="your.email@example.com"
                       required
                     />
@@ -172,7 +172,7 @@ export default function Contact() {
                       rows={6}
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-6 py-4 bg-gray-50 dark:bg-gray-700/50 border border-gray-200 dark:border-gray-600 rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 resize-none"
+                      className="w-full px-6 py-4 bg-gray-50 dark:bg-gray-700/50 border border-secondary dark:border-primary rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 resize-none"
                       placeholder="Tell me about your project..."
                       required
                     ></textarea>

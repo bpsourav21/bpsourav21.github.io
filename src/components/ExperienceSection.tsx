@@ -73,19 +73,19 @@ export default function ExperienceSection() {
 
   return (
     <div>
-      <h2 className="text-lg font-bold text-blue-900 uppercase border-b border-gray-300 pb-1 mb-3">Experience</h2>
+      <h2 className="text-lg font-bold text-primary uppercase border-b border-gray-300 pb-1 mb-3">Experience</h2>
       <div className="space-y-5">
         {experiences.map((exp, index) => (
-          <div key={index} className="pb-4 border-b border-gray-200 last:border-b-0 last:pb-0">
+          <div key={index} className="pb-4 border-b border-secondary last:border-b-0 last:pb-0">
             <div className="flex flex-col md:flex-row justify-between">
               <div>
-                <h3 className="font-bold text-blue-900 text-sm">{exp.title}</h3>
+                <h3 className="font-bold text-primary text-sm">{exp.title}</h3>
                 <div className="flex items-center gap-1">
                   <span className="text-sm font-medium">{exp.company}</span>
                 </div>
-                <p className="text-xs italic text-gray-600">{exp.description}</p>
+                <p className="text-xs italic text-secondary">{exp.description}</p>
               </div>
-              <div className="mt-1 md:mt-0 text-xs text-gray-600 md:text-right flex flex-col md:items-end">
+              <div className="mt-1 md:mt-0 text-xs text-secondary md:text-right flex flex-col md:items-end">
                 <div className="flex items-center gap-1">
                   <Calendar size={12} />
                   <span>{exp.period}</span>

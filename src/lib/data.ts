@@ -184,8 +184,7 @@ const data = {
         link: "https://chaldal.com/food-aid",
         description: [
           "Chaldal Food Aid is a platform that allows users to donate food items to those in need, supporting the community and promoting social responsibility.",
-          "Features include food item listing, donation tracking, and user authentication.",
-          "The app provides a user-friendly interface for donors to contribute food items and track their donations.",
+          "The app provides a user-friendly interface for donors to contribute food items and track their donations including features include food item listing, donation tracking, and user authentication.",
           "Developed with React, Redux, F#, SQL",
         ],
       },

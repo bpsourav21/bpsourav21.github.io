@@ -29,7 +29,7 @@ export default function Header() {
     <header
       className={`fixed top-0 w-full z-50 transition-all duration-500 ${
         isScrolled
-          ? "bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-lg border-b border-gray-200/20 dark:border-gray-700/20"
+          ? "bg-white/80 dark:bg-gray-900/80 backdrop-blur-md shadow-lg border-b border-secondary/20 dark:border-gray-700/20"
           : "bg-transparent"
       }`}
     >
@@ -78,7 +78,7 @@ export default function Header() {
             isMenuOpen ? "max-h-64 opacity-100 mt-4" : "max-h-0 opacity-0"
           }`}
         >
-          <nav className="flex flex-col space-y-4 py-4 border-t border-gray-200 dark:border-gray-700">
+          <nav className="flex flex-col space-y-4 py-4 border-t border-secondary dark:border-gray-700">
             {["About", "Skills", "Experience", "Projects", "Contact"].map((item) => (
               <button
                 key={item}

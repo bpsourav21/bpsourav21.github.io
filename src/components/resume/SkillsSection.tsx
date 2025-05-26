@@ -5,7 +5,7 @@ export default function SkillsSection() {
 
   return (
     <div>
-      <h2 className="text-md font-bold text-blue-900 mb-4 border-b border-gray-300 pb-2">
+      <h2 className="text-md font-bold text-primary mb-4 border-b border-primary pb-2">
         SKILLS
       </h2>
       <div className="grid grid-cols-1 gap-2">
@@ -16,7 +16,7 @@ export default function SkillsSection() {
               {skills.map((skill, index) => (
                 <div
                   key={index}
-                  className="px-2 py-1 text-xs text-center text-blue-900 font-bold border border-blue-900 rounded"
+                  className="px-2 py-1 text-xs text-center text-primary font-bold border border-blue-900 rounded"
                 >
                   {skill}
                 </div>
