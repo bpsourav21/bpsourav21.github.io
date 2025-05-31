@@ -1,27 +1,27 @@
-"use client"
+"use client";
 
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react";
 
 export default function Skills() {
-  const [isVisible, setIsVisible] = useState(false)
-  const sectionRef = useRef<HTMLElement>(null)
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true)
+          setIsVisible(true);
         }
       },
-      { threshold: 0.3 },
-    )
+      { threshold: 0.3 }
+    );
 
     if (sectionRef.current) {
-      observer.observe(sectionRef.current)
+      observer.observe(sectionRef.current);
     }
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   const skillCategories = [
     {
@@ -39,7 +39,7 @@ export default function Skills() {
       skills: ["Git", "Azure", "MongoDB", "Redis"],
       color: "from-red-400 to-red-600",
     },
-  ]
+  ];
 
   const allSkills = [
     "React",
@@ -75,7 +75,7 @@ export default function Skills() {
     "Git",
     "Azure",
     "Google Cloud Platform",
-  ]
+  ];
 
   return (
     <section
@@ -89,7 +89,9 @@ export default function Skills() {
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Skills & Expertise</h2>
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            Skills & Expertise
+          </h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
         </div>
 
@@ -99,7 +101,9 @@ export default function Skills() {
             <div
               key={categoryIndex}
               className={`group relative bg-white/80 dark:bg-gray-800/80 backdrop-blur-sm p-8 rounded-3xl shadow-xl hover:shadow-2xl dark:hover:shadow-blue-500/20 border border-secondary/50 dark:border-gray-700/50 transform transition-all duration-700 hover:-translate-y-4 hover:rotate-1 ${
-                isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                isVisible
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-10 opacity-0"
               }`}
               style={{ transitionDelay: `${categoryIndex * 200}ms` }}
             >
@@ -113,7 +117,9 @@ export default function Skills() {
                   <div
                     className={`w-20 h-20 bg-gradient-to-r ${category.color} rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-lg`}
                   >
-                    <span className="text-3xl font-bold text-white">{category.title.charAt(0)}</span>
+                    <span className="text-3xl font-bold text-white">
+                      {category.title.charAt(0)}
+                    </span>
                   </div>
                   <h3 className="text-2xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                     {category.title}
@@ -137,17 +143,21 @@ export default function Skills() {
 
         {/* All Skills Tags */}
         <div
-          className={`transform transition-all duration-1000 ${
+          className={`mt-20 transform transition-all duration-1000 ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}
         >
-          <h3 className="text-2xl font-bold text-gray-900 mb-8 text-center">Technologies I Work With</h3>
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+            Technologies I Work With
+          </h3>
           <div className="flex flex-wrap gap-3 justify-center">
             {allSkills.map((skill, index) => (
               <span
                 key={index}
                 className={`px-4 py-2 bg-white text-gray-700 rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 transform ${
-                  isVisible ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"
+                  isVisible
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-5 opacity-0"
                 }`}
                 style={{ transitionDelay: `${index * 50}ms` }}
               >
@@ -158,5 +168,5 @@ export default function Skills() {
         </div>
       </div>
     </section>
-  )
+  );
 }

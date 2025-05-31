@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Code, Palette, Users, Zap } from "lucide-react";
+import data from "../lib/data";
 
 export default function About() {
   const [isVisible, setIsVisible] = useState(false);
@@ -24,36 +24,9 @@ export default function About() {
     return () => observer.disconnect();
   }, []);
 
-  const features = [
-    {
-      icon: Code,
-      title: "Full-Stack Development",
-      description:
-        "Building end-to-end solutions with modern frameworks and best practices.",
-      gradient: "from-blue-500 to-cyan-500",
-    },
-    {
-      icon: Palette,
-      title: "UI/UX Excellence",
-      description:
-        "Crafting beautiful, intuitive interfaces that users love to interact with.",
-      gradient: "from-purple-500 to-pink-500",
-    },
-    {
-      icon: Zap,
-      title: "Performance Optimization",
-      description:
-        "Delivering lightning-fast applications with superior user experience.",
-      gradient: "from-green-500 to-emerald-500",
-    },
-    {
-      icon: Users,
-      title: "Team Leadership",
-      description:
-        "Leading cross-functional teams and mentoring developers to achieve excellence.",
-      gradient: "from-orange-500 to-red-500",
-    },
-  ];
+  const features = data.SummarySection.featureSummary;
+  const professionalSummary = data.SummarySection.professionalSummary;
+  const stats = data.SummarySection.stats;
 
   return (
     <section
@@ -85,30 +58,13 @@ export default function About() {
               Professional Summary
             </h3>
             <p className="text-gray-700 dark:text-gray-400 leading-relaxed">
-              Results-oriented Software Engineer with many years of progressive
-              experience in full-stack web and mobile development, specializing
-              in e-commerce, SaaS, and enterprise applications. Highly skilled
-              in React.js, React Native, Typescript, Node.js, F#, C#, .NET Core,
-              and a variety of modern frameworks and databases. Demonstrates
-              strong proficiency in both frontend and backend engineering, UI/UX
-              design, and agile methodologies.
+              {professionalSummary.section1}
             </p>
             <p className="text-gray-700 dark:text-gray-400 leading-relaxed">
-              Proven track record of delivering robust, scalable solutions for
-              high-traffic platforms. Adept at building and maintaining complex,
-              feature-rich applications, integrating diverse payment gateways,
-              and optimizing system performance. Recognized for mentoring junior
-              developers, driving code quality through rigorous reviews, and
-              collaborating closely with product and QA teams to exceed client
-              expectations.
+              {professionalSummary.section2}
             </p>
             <p className="text-gray-700 dark:text-gray-400 leading-relaxed">
-              Experienced in project leadership, requirement analysis, and
-              strategic planning—successfully managed and contributed to
-              multiple high-impact projects, including e-commerce platforms,
-              donation systems, voting applications, and POS solutions.
-              Passionate about continuous learning, open-source contribution,
-              and leveraging technology to solve real-world problems.
+              {professionalSummary.section3}
             </p>
           </div>
 
@@ -141,11 +97,7 @@ export default function About() {
           </div>
         </div>
         <div className="grid grid-cols-3 gap-8 pt-8">
-          {[
-            { number: "6+", label: "Years Experience", icon: "🚀" },
-            { number: "50+", label: "Projects Completed", icon: "💼" },
-            { number: "5", label: "Companies", icon: "🏢" },
-          ].map((stat, index) => (
+          {stats.map((stat, index) => (
             <div key={index} className="text-center group">
               <div className="text-4xl mb-2">{stat.icon}</div>
               <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent group-hover:scale-110 transition-transform duration-300">

@@ -11,6 +11,8 @@ import Projects from "@/src/components/Projects";
 import Contact from "@/src/components/Contact";
 import Footer from "@/src/components/Footer";
 import ResumePopup from "../components/resume/ResumePopup";
+import Education from "../components/Education";
+import Reference from "../components/Reference";
 
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -32,7 +34,9 @@ export default function Home() {
           <About />
           <Skills />
           <Experience />
+          <Education />
           <Projects />
+          <Reference />
           <Contact />
         </main>
         <Footer />

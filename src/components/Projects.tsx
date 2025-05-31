@@ -93,7 +93,7 @@ export default function Projects() {
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white  mb-4">Featured Projects</h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
         </div>
 

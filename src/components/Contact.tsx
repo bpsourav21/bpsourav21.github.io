@@ -1,51 +1,54 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useEffect, useRef, useState } from "react"
-import { Phone, Mail, Linkedin, Github, Globe, Send } from "lucide-react"
+import { useEffect, useRef, useState } from "react";
+import {
+  Phone,
+  Mail,
+  Linkedin,
+  Github,
+  Globe,
+  Send,
+  Facebook,
+  Instagram,
+} from "lucide-react";
+import data from "../lib/data";
 
 export default function Contact() {
-  const [isVisible, setIsVisible] = useState(false)
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" })
-  const sectionRef = useRef<HTMLElement>(null)
+  const [isVisible, setIsVisible] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true)
+          setIsVisible(true);
         }
       },
-      { threshold: 0.3 },
-    )
+      { threshold: 0.3 }
+    );
 
     if (sectionRef.current) {
-      observer.observe(sectionRef.current)
+      observer.observe(sectionRef.current);
     }
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     // Handle form submission
-    console.log("Form submitted:", formData)
-  }
+    console.log("Form submitted:", formData);
+  };
 
-  const contactInfo = [
-    { icon: Phone, text: "+8801671820025", href: "tel:+8801671820025", label: "Phone" },
-    { icon: Mail, text: "bpsourav21@gmail.com", href: "mailto:bpsourav21@gmail.com", label: "Email" },
-    { icon: Linkedin, text: "LinkedIn Profile", href: "https://www.linkedin.com/in/bpsourav21", label: "LinkedIn" },
-    { icon: Github, text: "GitHub Profile", href: "https://github.com/bpsourav21", label: "GitHub" },
-    { icon: Globe, text: "Portfolio Website", href: "https://bpsourav21.github.io", label: "Website" },
-  ]
-
-  const socialLinks = [
-    { icon: Linkedin, href: "https://www.linkedin.com/in/bpsourav21" },
-    { icon: Github, href: "https://github.com/bpsourav21" },
-    // Add more social links as needed
-  ]
+  const contactInfo = data.ProfileSection.connect;
+  const socialLinks = data.ProfileSection.connectSocial;
 
   return (
     <section
@@ -61,11 +64,13 @@ export default function Contact() {
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}
         >
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">Get In Touch</h2>
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white  mb-4">
+            Get In Touch
+          </h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto mb-4"></div>
-          <p className="text-secondary max-w-2xl mx-auto">
-            I'm always open to discussing new opportunities, interesting projects, or just having a chat about
-            technology.
+          <p className="text-secondary dark:text-gray-300 max-w-2xl mx-auto">
+            I'm always open to discussing new opportunities, interesting
+            projects, or just having a chat about technology.
           </p>
         </div>
 
@@ -73,10 +78,11 @@ export default function Contact() {
           {/* Contact Info */}
           <div
             className={`transform transition-all duration-1000 ${
-              isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"
+              isVisible
+                ? "translate-x-0 opacity-100"
+                : "-translate-x-10 opacity-0"
             }`}
           >
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">Let's Connect</h3>
             <div className="space-y-6 relative z-10">
               {contactInfo.map((item, index) => (
                 <a
@@ -98,8 +104,10 @@ export default function Contact() {
                 </a>
               ))}
             </div>
-            <div>
-              <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-6">Follow Me</h4>
+            <div className="mt-12">
+              <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-6">
+                Follow Me
+              </h4>
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
                   <a
@@ -119,25 +127,31 @@ export default function Contact() {
           {/* Contact Form */}
           <div
             className={`transform transition-all duration-1000 ${
-              isVisible ? "translate-x-0 opacity-100" : "translate-x-10 opacity-0"
+              isVisible
+                ? "translate-x-0 opacity-100"
+                : "translate-x-10 opacity-0"
             }`}
           >
             <div className="bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl shadow-2xl p-10 border border-secondary/50 dark:border-gray-700/50 relative overflow-hidden">
-              {/* Form background decoration */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-full -translate-y-16 translate-x-16"></div>
-
               <div className="relative z-10">
-                <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">Send a Message</h3>
+                <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
+                  Send a Message
+                </h3>
                 <form onSubmit={handleSubmit} className="space-y-8">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3"
+                    >
                       Name
                     </label>
                     <input
                       type="text"
                       id="name"
                       value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, name: e.target.value })
+                      }
                       className="w-full px-6 py-4 bg-gray-50 dark:bg-gray-700/50 border border-secondary dark:border-primary rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
                       placeholder="Your full name"
                       required
@@ -154,7 +168,9 @@ export default function Contact() {
                       type="email"
                       id="email"
                       value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, email: e.target.value })
+                      }
                       className="w-full px-6 py-4 bg-gray-50 dark:bg-gray-700/50 border border-secondary dark:border-primary rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
                       placeholder="your.email@example.com"
                       required
@@ -171,7 +187,9 @@ export default function Contact() {
                       id="message"
                       rows={6}
                       value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      onChange={(e) =>
+                        setFormData({ ...formData, message: e.target.value })
+                      }
                       className="w-full px-6 py-4 bg-gray-50 dark:bg-gray-700/50 border border-secondary dark:border-primary rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 resize-none"
                       placeholder="Tell me about your project..."
                       required
@@ -191,5 +209,5 @@ export default function Contact() {
         </div>
       </div>
     </section>
-  )
+  );
 }

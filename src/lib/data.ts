@@ -1,17 +1,71 @@
-import { link } from "fs";
-import ProfileSection from "../components/ProfileSection";
+import {
+  Code,
+  Palette,
+  Users,
+  Zap,
+  Phone,
+  Mail,
+  Linkedin,
+  Github,
+  Globe,
+  Send,
+  Facebook,
+  Instagram,
+} from "lucide-react";
+
+const contactInfo = {
+  phone: "+8801671820025",
+  email: "bpsourav21@gmail.com",
+  linkedin: "https://www.linkedin.com/in/bpsourav21",
+  github: "https://github.com/bpsourav21",
+  website: "https://bpsourav21.github.io",
+  facebook: "https://www.facebook.com/mahadi.sourav/",
+  instagram: "https://www.instagram.com/mahadi.sourav/",
+};
 
 const data = {
   ProfileSection: {
     name: "MAHADI HASAN SOURAV",
     profilePic: "/propic2.jpg",
-    contactInfo: {
-      phone: "+8801671820025",
-      email: "bpsourav21@gmail.com",
-      linkedin: "https://www.linkedin.com/in/bpsourav21",
-      github: "https://github.com/bpsourav21",
-      website: "https://bpsourav21.github.io",
-    },
+    contactInfo: contactInfo,
+    connect: [
+      {
+        icon: Phone,
+        text: contactInfo.phone,
+        href: `tel:${contactInfo.phone}`,
+        label: "Phone",
+      },
+      {
+        icon: Mail,
+        text: contactInfo.email,
+        href: `mailto:${contactInfo.email}`,
+        label: "Email",
+      },
+      {
+        icon: Linkedin,
+        text: "LinkedIn Profile",
+        href: contactInfo.linkedin,
+        label: "LinkedIn",
+      },
+      {
+        icon: Github,
+        text: "GitHub Profile",
+        href: contactInfo.github,
+        label: "GitHub",
+      },
+      {
+        icon: Globe,
+        text: "Portfolio Website",
+        href: contactInfo.website,
+        label: "Website",
+      },
+    ],
+    connectSocial: [
+      { icon: Linkedin, href: contactInfo.linkedin },
+      { icon: Github, href: contactInfo.github },
+      { icon: Facebook, href: contactInfo.facebook },
+      { icon: Instagram, href: contactInfo.instagram },
+    ],
   },
   EducationSection: {
     educations: [
@@ -248,6 +302,41 @@ const data = {
       section2: `Proven track record of delivering robust, scalable solutions for high-traffic platforms. Adept at building and maintaining complex, feature-rich applications, integrating diverse payment gateways, and optimizing system performance. Recognized for mentoring junior developers, driving code quality through rigorous reviews, and collaborating closely with product and QA teams to exceed client expectations.`,
       section3: `Experienced in project leadership, requirement analysis, and strategic planning—successfully managed and contributed to multiple high-impact projects, including e-commerce platforms, donation systems, voting applications, and POS solutions. Passionate about continuous learning, open-source contribution, and leveraging technology to solve real-world problems.`,
     },
+    featureSummary: [
+      {
+        icon: Code,
+        title: "Full-Stack Development",
+        description:
+          "Building end-to-end solutions with modern frameworks and best practices.",
+        gradient: "from-blue-500 to-cyan-500",
+      },
+      {
+        icon: Palette,
+        title: "UI/UX Excellence",
+        description:
+          "Crafting beautiful, intuitive interfaces that users love to interact with.",
+        gradient: "from-purple-500 to-pink-500",
+      },
+      {
+        icon: Zap,
+        title: "Performance Optimization",
+        description:
+          "Delivering lightning-fast applications with superior user experience.",
+        gradient: "from-green-500 to-emerald-500",
+      },
+      {
+        icon: Users,
+        title: "Team Leadership",
+        description:
+          "Leading cross-functional teams and mentoring developers to achieve excellence.",
+        gradient: "from-orange-500 to-red-500",
+      },
+    ],
+    stats: [
+      { number: "6+", label: "Years Experience", icon: "🚀" },
+      { number: "50+", label: "Projects Completed", icon: "💼" },
+      { number: "5", label: "Companies", icon: "🏢" },
+    ],
   },
   ReferencesSection: {
     references: [
