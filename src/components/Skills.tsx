@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import data from "../lib/data";
 
 export default function Skills() {
   const [isVisible, setIsVisible] = useState(false);
@@ -23,58 +24,39 @@ export default function Skills() {
     return () => observer.disconnect();
   }, []);
 
+  const skills = data.SkillsSection.skillsByGroup;
+
   const skillCategories = [
     {
-      title: "Frontend",
-      skills: ["React", "TypeScript", "Next.js", "React Native"],
+      title: "Frontend Development",
+      skills: skills.group1,
       color: "from-blue-400 to-blue-600",
     },
     {
-      title: "Backend",
-      skills: ["Node.js", "Python", "C#/.NET", "SQL"],
+      title: "Backend Development",
+      skills: skills.group2,
       color: "from-green-400 to-green-600",
     },
     {
-      title: "Tools & Others",
-      skills: ["Git", "Azure", "MongoDB", "Redis"],
+      title: "State Management",
+      skills: skills.group3,
+      color: "from-green-400 to-green-600",
+    },
+    {
+      title: "Databases & Storage",
+      skills: skills.group4,
       color: "from-red-400 to-red-600",
     },
-  ];
-
-  const allSkills = [
-    "React",
-    "React-Native",
-    "Expo",
-    "TypeScript",
-    "JavaScript",
-    "Next.js",
-    "Node.js",
-    "C#",
-    "F#",
-    "Dotnet",
-    "Python",
-    "Redux",
-    "Zustand",
-    "Mobx",
-    "SQL",
-    "Postgres",
-    "MongoDB",
-    "CouchDB",
-    "PouchDB",
-    "Neon",
-    "Prisma",
-    "Redis",
-    "Tailwind",
-    "Bootstrap",
-    "Figma",
-    "Adobe XD",
-    "Shadcn",
-    "Axiom",
-    "Analytics",
-    "Kusto Query",
-    "Git",
-    "Azure",
-    "Google Cloud Platform",
+    {
+      title: "UI/UX & Design",
+      skills: skills.group5,
+      color: "from-purple-400 to-purple-600",
+    },
+    {
+      title: "Tools & Platforms",
+      skills: skills.group6,
+      color: "from-yellow-400 to-yellow-600",
+    },
   ];
 
   return (
@@ -139,32 +121,6 @@ export default function Skills() {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* All Skills Tags */}
-        <div
-          className={`mt-20 transform transition-all duration-1000 ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }`}
-        >
-          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
-            Technologies I Work With
-          </h3>
-          <div className="flex flex-wrap gap-3 justify-center">
-            {allSkills.map((skill, index) => (
-              <span
-                key={index}
-                className={`px-4 py-2 bg-white text-gray-700 rounded-full shadow-md hover:shadow-lg hover:scale-105 transition-all duration-300 transform ${
-                  isVisible
-                    ? "translate-y-0 opacity-100"
-                    : "translate-y-5 opacity-0"
-                }`}
-                style={{ transitionDelay: `${index * 50}ms` }}
-              >
-                {skill}
-              </span>
-            ))}
-          </div>
         </div>
       </div>
     </section>

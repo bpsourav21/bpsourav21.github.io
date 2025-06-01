@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center">
           <div className="text-4xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-blue-500 bg-clip-text text-transparent mb-6 hover:scale-110 transition-transform duration-300 cursor-default">
-            MHS
+            BPSOURAV21
           </div>
           <p className="text-gray-300 dark:text-gray-400 mb-8 text-lg max-w-2xl mx-auto leading-relaxed">
             Building exceptional digital experiences with passion, precision, and cutting-edge technology.
@@ -20,7 +20,7 @@ export default function Footer() {
 
           <div className="border-t border-gray-700 dark:border-gray-800 pt-8">
             <p className="text-gray-400 dark:text-gray-500">
-              © 2024 Mahadi Hasan Sourav. All rights reserved.
+              © 2025 Mahadi Hasan Sourav. All rights reserved.
               <span className="inline-block mx-2">•</span>
               Crafted with <span className="text-red-400 animate-pulse">❤️</span> using Next.js and Tailwind CSS.
             </p>

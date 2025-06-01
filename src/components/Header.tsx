@@ -1,29 +1,38 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { Menu, X, Sun, Moon } from "lucide-react"
-import { useTheme } from "../providers/ThemeProvider"
+import { useState, useEffect } from "react";
+import { Menu, X, Sun, Moon } from "lucide-react";
+import { useTheme } from "../providers/ThemeProvider";
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isScrolled, setIsScrolled] = useState(false)
-  const { theme, toggleTheme } = useTheme()
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)
-    }
-    window.addEventListener("scroll", handleScroll)
-    return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
+    const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" })
+      element.scrollIntoView({ behavior: "smooth" });
     }
-    setIsMenuOpen(false)
-  }
+    setIsMenuOpen(false);
+  };
+
+  const menuList = [
+    "About",
+    "Skills",
+    "Experience",
+    "Education",
+    "Projects",
+    "Contact",
+  ];
 
   return (
     <header
@@ -37,12 +46,12 @@ export default function Header() {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <div className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            MHS
+            BPSOURAV21
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {["About", "Skills", "Experience", "Projects", "Contact"].map((item) => (
+            {menuList.map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
@@ -79,7 +88,7 @@ export default function Header() {
           }`}
         >
           <nav className="flex flex-col space-y-4 py-4 border-t border-secondary dark:border-gray-700">
-            {["About", "Skills", "Experience", "Projects", "Contact"].map((item) => (
+            {menuList.map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
@@ -92,5 +101,5 @@ export default function Header() {
         </div>
       </div>
     </header>
-  )
+  );
 }

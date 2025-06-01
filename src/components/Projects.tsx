@@ -1,83 +1,31 @@
-"use client"
+"use client";
 
-import { useEffect, useRef, useState } from "react"
-import { ExternalLink, Github, Star } from "lucide-react"
+import { useEffect, useRef, useState } from "react";
+import { ExternalLink, Github, Star } from "lucide-react";
+import data from "../lib/data";
 
 export default function Projects() {
-  const [isVisible, setIsVisible] = useState(false)
-  const sectionRef = useRef<HTMLElement>(null)
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true)
+          setIsVisible(true);
         }
       },
-      { threshold: 0.3 },
-    )
+      { threshold: 0.3 }
+    );
 
     if (sectionRef.current) {
-      observer.observe(sectionRef.current)
+      observer.observe(sectionRef.current);
     }
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
-  const projects = [
-    {
-      title: "Optimizely Visual Editor",
-      description:
-        "A WYSIWYG editor that loads user's website and lets them adjust the visitor experience for various experiments.",
-      tech: ["React", "Zustand", "Webpack", "TypeScript"],
-      category: "Web Application",
-      gradient: "from-blue-400 to-purple-500",
-      featured: true,
-    },
-    {
-      title: "MRCS Web App",
-      description: "A platform for MRCS medical exam with separate admin panel for organizing questions and results.",
-      tech: ["Next.js", "Postgres", "Prisma", "Redux"],
-      category: "Educational Platform",
-      link: "https://mrcs-web-app.com",
-      gradient: "from-green-400 to-blue-500",
-      featured: false,
-    },
-    {
-      title: "Chaldal E-commerce",
-      description:
-        "Online grocery shopping platform with multi-city support, payment integration, and real-time delivery tracking.",
-      tech: ["React", "Node.js", "C#", "SQL", "Service Fabric"],
-      category: "E-commerce",
-      link: "https://chaldal.com",
-      gradient: "from-pink-400 to-red-500",
-      featured: false,
-    },
-    {
-      title: "Pattern Mobile App",
-      description: "Dynamic food ordering app with rewards system, geolocation, and social media integration.",
-      tech: ["React Native", "Firebase", "Redux"],
-      category: "Mobile App",
-      gradient: "from-yellow-400 to-orange-500",
-      featured: false,
-    },
-    {
-      title: "Pomodoro Time Counter",
-      description: "Cross-platform productivity app with customizable timers and detailed reporting.",
-      tech: ["React Native", "Expo", "SQLite"],
-      category: "Productivity",
-      gradient: "from-teal-400 to-cyan-500",
-      featured: false,
-    },
-    {
-      title: "Chaldal Mobile Apps",
-      description: "iOS and Android apps for grocery shopping with real-time tracking and payment integration.",
-      tech: ["React Native", "Mobx", "TypeScript"],
-      category: "Mobile App",
-      gradient: "from-purple-400 to-pink-500",
-      featured: false,
-    },
-  ]
+  const projects = data.ProjectsSection.projects;
 
   return (
     <section
@@ -93,7 +41,9 @@ export default function Projects() {
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}
         >
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white  mb-4">Featured Projects</h2>
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white  mb-4">
+            Featured Projects
+          </h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
         </div>
 
@@ -102,12 +52,16 @@ export default function Projects() {
             <div
               key={index}
               className={`group relative bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-3xl shadow-xl hover:shadow-2xl dark:hover:shadow-purple-500/20 overflow-hidden border border-secondary/50 dark:border-gray-700/50 transition-all duration-700 transform hover:-translate-y-6 hover:rotate-1 ${
-                isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+                isVisible
+                  ? "translate-y-0 opacity-100"
+                  : "translate-y-10 opacity-0"
               }`}
               style={{ transitionDelay: `${index * 150}ms` }}
             >
               {/* Enhanced Project Header with gradient */}
-              <div className={`h-3 bg-gradient-to-r ${project.gradient} relative`}>
+              <div
+                className={`h-3 bg-gradient-to-r ${project.gradient} relative`}
+              >
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
               </div>
 
@@ -154,9 +108,14 @@ export default function Projects() {
                 </div>
 
                 {/* Project Description */}
-                <p className="text-secondary dark:text-gray-300 mb-6 leading-relaxed relative z-10">
-                  {project.description}
-                </p>
+                {project.description.map((desc, descIndex) => (
+                  <p
+                    key={descIndex}
+                    className="text-secondary dark:text-gray-300 mb-6 leading-relaxed relative z-10"
+                  >
+                    {desc}
+                  </p>
+                ))}
 
                 {/* Enhanced Tech Stack */}
                 <div className="flex flex-wrap gap-2 relative z-10">
@@ -175,5 +134,5 @@ export default function Projects() {
         </div>
       </div>
     </section>
-  )
+  );
 }

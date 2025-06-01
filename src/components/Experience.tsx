@@ -1,72 +1,31 @@
-"use client"
+"use client";
 
-import { useEffect, useRef, useState } from "react"
-import { MapPin, Calendar, Building } from "lucide-react"
+import { useEffect, useRef, useState } from "react";
+import { MapPin, Calendar, Building } from "lucide-react";
+import data from "../lib/data";
 
 export default function Experience() {
-  const [isVisible, setIsVisible] = useState(false)
-  const sectionRef = useRef<HTMLElement>(null)
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true)
+          setIsVisible(true);
         }
       },
-      { threshold: 0.3 },
-    )
+      { threshold: 0.3 }
+    );
 
     if (sectionRef.current) {
-      observer.observe(sectionRef.current)
+      observer.observe(sectionRef.current);
     }
 
-    return () => observer.disconnect()
-  }, [])
+    return () => observer.disconnect();
+  }, []);
 
-  const experiences = [
-    {
-      title: "Software Engineer II",
-      company: "Optimizely",
-      period: "10/2024 - Present",
-      location: "Dhaka, Bangladesh",
-      description: "Digital Experience Platform (DXP)",
-      highlights: [
-        "Developed high-performance frontend features for experimentation platform using React, Nuclear JS, Python",
-        "Partnered with product managers to rapidly prototype A/B testing UI components",
-        "Created reusable UI libraries improving developer velocity across teams",
-        "Optimized performance reducing initial load time by 35% through lazy-loading strategies",
-        "Championed testing best practices with comprehensive unit and integration test coverage",
-      ],
-    },
-    {
-      title: "Software Engineer (level-3)",
-      company: "Chaldal Limited",
-      period: "10/2018 - 10/2024",
-      location: "Dhaka, Bangladesh",
-      description: "Online Grocery E-commerce",
-      highlights: [
-        "Wrote clean code leveraging React, React-Native, Redux, Mobx, Node.js, C#, F#",
-        "Evaluated project requirements and proposed alternatives using research and data",
-        "Contributed to sprint planning, prioritizing backlogs to meet new demands",
-        "Exceeded client expectations working closely with product and QA teams",
-        "Developed testable software using agile methodologies",
-      ],
-    },
-    {
-      title: "Frontend Developer (Remote)",
-      company: "Pattern Technologies",
-      period: "04/2023 - 11/2023",
-      location: "Lahore, Pakistan",
-      description: "Online Food Service",
-      highlights: [
-        "Participated in pre-project analysis and technical assessments",
-        "Built reusable code to minimize costs and improve efficiency",
-        "Designed layout and graphics to enhance app aesthetics",
-        "Managed project and web strategic planning for entire team",
-      ],
-    },
-  ]
+  const experiences = data.ExperienceSection.experiences;
 
   return (
     <section
@@ -82,7 +41,9 @@ export default function Experience() {
             isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
           }`}
         >
-          <h2 className="text-4xl font-bold text-gray-900 dark:text-white  mb-4">Work Experience</h2>
+          <h2 className="text-4xl font-bold text-gray-900 dark:text-white  mb-4">
+            Work Experience
+          </h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto"></div>
         </div>
 
@@ -95,7 +56,9 @@ export default function Experience() {
               <div
                 key={index}
                 className={`relative flex flex-col md:flex-row items-start space-y-6 md:space-y-0 md:space-x-12 transform transition-all duration-1000 ${
-                  isVisible ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"
+                  isVisible
+                    ? "translate-x-0 opacity-100"
+                    : "-translate-x-10 opacity-0"
                 }`}
                 style={{ transitionDelay: `${index * 300}ms` }}
               >
@@ -119,7 +82,9 @@ export default function Experience() {
                         <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                           {exp.title}
                         </h3>
-                        <p className="text-secondary dark:text-gray-400 italic mb-4 text-lg">{exp.description}</p>
+                        <p className="text-secondary dark:text-gray-400 italic mb-4 text-lg">
+                          {exp.description}
+                        </p>
                       </div>
                       <div className="lg:text-right space-y-3 lg:ml-6">
                         <div className="flex items-center space-x-2 text-secondary dark:text-gray-400">
@@ -154,5 +119,5 @@ export default function Experience() {
         </div>
       </div>
     </section>
-  )
+  );
 }

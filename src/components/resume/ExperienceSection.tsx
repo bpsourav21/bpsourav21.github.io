@@ -37,8 +37,8 @@ export default function ExperienceSection() {
               </div>
             </div>
             <ul className="list-disc list-bullet text-sm space-y-1 ml-4">
-              {exp.responsibilities.map((resp, respIndex) => (
-                <li key={respIndex}>{resp}</li>
+              {exp.highlights.map((highlight, highlightIndex) => (
+                <li key={highlightIndex}>{highlight}</li>
               ))}
             </ul>
           </div>

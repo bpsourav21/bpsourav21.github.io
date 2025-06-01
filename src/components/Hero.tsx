@@ -9,9 +9,9 @@ import {
   Mail,
 } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useState } from "react";
 import ResumePopup from "./resume/ResumePopup";
+import data from "../lib/data";
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false);
@@ -37,6 +37,16 @@ export default function Hero() {
   const closeResumePopup = () => {
     setIsResumePopupOpen(false);
   };
+
+  const profile = data.ProfileSection;
+  const summary = data.SummarySection;
+
+  const badgePositions = [
+    "-top-4 -left-4",
+    "-bottom-4 -right-4",
+    "-top-4 -right-4",
+    "-bottom-4 -left-4",
+  ];
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-blue-900">
@@ -81,26 +91,16 @@ export default function Hero() {
                 <span className="text-gray-900 dark:text-white">I'm</span>
                 <br />
                 <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent">
-                  Mahadi Hasan Sourav
+                  {profile.name}
                 </span>
                 <br />
               </h1>
 
               <p className="text-xl text-secondary dark:text-gray-300 font-bold leading-relaxed max-w-lg">
-                Full-Stack Software Engineer
+                {profile.stack}
               </p>
               <p className="text-gray-700 dark:text-gray-400 leading-relaxed">
-                Versatile and results-driven full-stack web developer with a
-                strong emphasis on frontend architecture, experimentation
-                platforms, and performance optimization. Proven track record of
-                leading cross-functional initiatives, mentoring junior
-                developers, and collaborating closely with product teams to
-                deliver high-impact, scalable solutions. Passionate about
-                building intuitive user experiences, evolving robust engineering
-                practices, and contributing to product strategy in fast-paced,
-                innovation-driven environments. Seeking a leadership-oriented
-                role where technical expertise and product thinking converge to
-                drive business growth.
+                {summary.summary}
               </p>
             </div>
 
@@ -185,16 +185,16 @@ export default function Hero() {
               </div>
 
               {/* Floating Badges */}
-              <div className="absolute -top-4 -right-4 bg-white dark:bg-gray-800 px-4 py-2 rounded-xl shadow-lg border border-secondary dark:border-gray-700 animate-float">
-                <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">
-                  6+ Years
-                </span>
-              </div>
-              <div className="absolute -bottom-4 -left-4 bg-white dark:bg-gray-800 px-4 py-2 rounded-xl shadow-lg border border-secondary dark:border-gray-700 animate-float animation-delay-1000">
-                <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">
-                  50+ Projects
-                </span>
-              </div>
+              {summary.stats.map((stat, index) => (
+                <div
+                  key={index}
+                  className={`absolute ${badgePositions[index]} bg-white dark:bg-gray-800 px-4 py-2 rounded-xl shadow-lg border border-secondary dark:border-gray-700 animate-float`}
+                >
+                  <span className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+                    {stat.number} {stat.label}
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
         </div>

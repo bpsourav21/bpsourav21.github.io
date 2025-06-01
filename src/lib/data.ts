@@ -1,3 +1,4 @@
+import { group } from "console";
 import {
   Code,
   Palette,
@@ -26,6 +27,7 @@ const contactInfo = {
 const data = {
   ProfileSection: {
     name: "MAHADI HASAN SOURAV",
+    stack: "Full-Stack Software Engineer",
     profilePic: "/propic2.jpg",
     contactInfo: contactInfo,
     connect: [
@@ -103,12 +105,11 @@ const data = {
         period: "10/2024 - Present",
         location: "Dhaka, Bangladesh",
         description: "Digital Experience Platform (DXP)",
-        responsibilities: [
-          "Developed and maintained high-performance, user-focused frontend features for Optimizely's experimentation and personalization platform such as A/B test, PersonalizationCampaign, Multi ArmedBandit, MultiVariatetests etc using React, Nuclear JS, Python, Webpack and TypeScript.",
+        highlights: [
+          "Developed and maintained high-performance, user-focused frontend features for experimentation and personalization platform such as A/B test, Personalization Campaign, Multi ArmedBandit, MultiVariatetests etc",
           "Partnered with product managers and designers to rapidly prototype and ship A/B testing UI components, ensuring accessibility and responsiveness across devices.",
           "Created reusable UI libraries and internal tools that improved frontend developer velocity and consistency across teams.",
           "Optimized performance for large-scale experimentation dashboards, reducing initial load time by 35% through lazy-loading strategies and memoization.",
-          "Championed testing best practices with comprehensive unit and integration test coverage using Mocha, Chai, Sinon, and Enzyme.",
           "Contributed to resolve vulnerabilities, internal documentation and on boarding materials to support knowledge sharing and team growth",
         ],
       },
@@ -118,7 +119,7 @@ const data = {
         period: "10/2018 - 10/2024",
         location: "Dhaka, Bangladesh",
         description: "Online Grocery E-commerce",
-        responsibilities: [
+        highlights: [
           "Wrote clean and dynamic code, leveraging expertise across multiple programming languages such as React, React-Native, Redux, Mobx, Node js, C#, F#, Dot net, SQL etc. to meet diverse requirements.",
           "Kept pace with changing coding standards and requirements and maintained updated software.",
           "Evaluated project requirements, identified challenges and proposed alternatives using research and data.",
@@ -134,7 +135,7 @@ const data = {
         period: "04/2023 - 11/2023",
         location: "Lahore, Pakistan",
         description: "Online Food Service",
-        responsibilities: [
+        highlights: [
           "Participated in pre-project analysis and technical assessments to validate creation of user-friendly interface.",
           "Built reusable code to utilize for other projects and to minimize costs.",
           "Designed layout and graphics to enhance aesthetics and appearance of the app.",
@@ -148,7 +149,7 @@ const data = {
         period: "01/2017 - 06/2018",
         location: "Dhaka, Bangladesh",
         description: "POS Service Provider",
-        responsibilities: [
+        highlights: [
           "Helped team complete smooth, professional software deployments using React, React React-Native, Node js, Mongo DB, Couch DB, Pouch DB.",
           "Managed team resources to deliver on sprint goals within expected timeframes.",
           "Aligned projects with requirements and specifications to deliver above-benchmark results.",
@@ -162,7 +163,7 @@ const data = {
         period: "12/2016 - 12/2016",
         location: "Dhaka, Bangladesh",
         description: "Website service provider",
-        responsibilities: [
+        highlights: [
           "Used to develop website using CodeIgnitor, Javascript, PHP and Mysql.",
         ],
       },
@@ -175,8 +176,12 @@ const data = {
         link: null,
         description: [
           "A WSYWIG editor that loads user's website and let them adjust the visitor experience for various experiment however they like for app.optimizely.com",
-          "A Micro Front End application build on React, Zustand, webpack.",
+          "A Micro Front End application build for Optimizely's experimentation platform.",
         ],
+        tech: ["React", "Typescript", "Zustand", "Webpack"],
+        category: "Web Application",
+        gradient: "from-blue-400 to-purple-500",
+        featured: true,
       },
       {
         title: "MRCS Web App",
@@ -187,6 +192,17 @@ const data = {
           "Implemented modular state management with Redux to maintain app consistency across user sessions and components.",
           "Designed and optimized RESTful API interactions for seamless communication.",
         ],
+        tech: [
+          "Next.js",
+          "Postgres",
+          "Prisma",
+          "Redux",
+          "Tailwind CSS",
+          "Shadcn UI",
+        ],
+        category: "Educational Platform",
+        gradient: "from-green-400 to-blue-500",
+        featured: true,
       },
       {
         title: "Pomodoro Time Counter",
@@ -196,6 +212,10 @@ const data = {
           "Helps to focus using different countdown with breaks",
           "Lucrative report and UI for users",
         ],
+        tech: ["React Native", "Typescript", "Expo", "SQLite"],
+        category: "Productivity",
+        gradient: "from-teal-400 to-cyan-500",
+        featured: false,
       },
       {
         title: "Pattern the App",
@@ -204,6 +224,10 @@ const data = {
           "Contributed on creating dynamic components and animated UI",
           "Developed several features including cart grouping, addons, rewards, login, geolocation capture, FB SDK integration etc.",
         ],
+        tech: ["React Native", "Typescript", "Firebase", "Redux"],
+        category: "Mobile App",
+        gradient: "from-yellow-400 to-orange-500",
+        featured: false,
       },
       {
         title: "Chaldal website",
@@ -212,6 +236,18 @@ const data = {
           "Developed with ReactJS, Node JS, Typesctipt, SQL, Dotnet Core, C#, F#, SQL, Service Fabric",
           "Contributed most of the new features like Mulcity support, Address updation, Chaldal Credit, Recipes, Donation, Refund, Due payment, Geolocation etc.",
         ],
+        tech: [
+          "React",
+          "Typescript",
+          "Node.js",
+          "C#",
+          "F#",
+          "SQL",
+          "Service Fabric",
+        ],
+        category: "E-commerce",
+        gradient: "from-pink-400 to-red-500",
+        featured: false,
       },
       {
         title: "Chaldal App, IOS & Android",
@@ -222,6 +258,10 @@ const data = {
           "Used advanced user interface features like animated tab bar, animated header, animated bottom sheet etc.",
           "Both apps are available in respective stores",
         ],
+        tech: ["React Native", "Mobx", "TypeScript"],
+        category: "Mobile App",
+        gradient: "from-purple-400 to-pink-500",
+        featured: false,
       },
       {
         title: "Chaldal Vegetable Network",
@@ -230,8 +270,11 @@ const data = {
           "The Chaldal Vegetable Network is a valuable initiative that aims to empower farmers and consumers, promote sustainable agriculture, and contribute to food security in the region.",
           "Features include farmer registration, product listing, order management, and payment processing.",
           "The app provides a seamless experience for both farmers and consumers, promoting sustainable agriculture and fair trade practices.",
-          "Developed with F#, React, Redux, React-Native, SQL, Liquibase",
         ],
+        tech: ["F#", "React", "Redux", "React-Native", "SQL", "Liquibase"],
+        category: "E-commerce",
+        gradient: "from-pink-400 to-orange-500",
+        featured: false,
       },
       {
         title: "Chaldal Food Aid",
@@ -239,8 +282,11 @@ const data = {
         description: [
           "Chaldal Food Aid is a platform that allows users to donate food items to those in need, supporting the community and promoting social responsibility.",
           "The app provides a user-friendly interface for donors to contribute food items and track their donations including features include food item listing, donation tracking, and user authentication.",
-          "Developed with React, Redux, F#, SQL",
         ],
+        tech: ["F#", "React", "Redux", "SQL", "Liquibase"],
+        category: "Donation Platform",
+        gradient: "from-teal-400 to-red-500",
+        featured: false,
       },
       {
         title: "Chaldal Voting System",
@@ -249,8 +295,11 @@ const data = {
           "It's an internal voting system for Chaldal employees to vote for various purposes like employee of the month, project selection etc.",
           "Features include user authentication, voting management, and result tracking.",
           "The app provides a secure and efficient platform for employees to participate in voting processes.",
-          "Developed with React, Redux, F#, Postgres",
         ],
+        tech: ["React", "F#", "SQL", "Service Fabric", "Liquibase"],
+        category: "Voting System",
+        gradient: "from-green-400 to-blue-500",
+        featured: false,
       },
     ],
   },
@@ -263,14 +312,10 @@ const data = {
         "TypeScript",
         "JavaScript",
         "Next.js",
-        "Node.js",
-        "C#",
-        "F#",
-        "Dotnet",
-        "Python",
       ],
-      group2: ["Redux", "Zustand", "Mobx"],
-      group3: [
+      group2: ["Node.js", "C#", "F#", "Dotnet", "Python"],
+      group3: ["Redux", "Zustand", "Mobx"],
+      group4: [
         "SQL",
         "Postgres",
         "MongoDB",
@@ -280,8 +325,8 @@ const data = {
         "Prisma",
         "Redis",
       ],
-      group4: ["Tailwind", "Bootstrap", "Figma", "Adobe XD", "Shadcn", "Axiom"],
-      group5: [
+      group5: ["Tailwind", "Bootstrap", "Figma", "Adobe XD", "Shadcn", "Axiom"],
+      group6: [
         "Analytics",
         "Kusto Query",
         "Git",

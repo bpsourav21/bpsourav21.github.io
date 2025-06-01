@@ -1,7 +1,7 @@
 "use client";
 
+import { Award, Calendar, MapPin } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import { GraduationCap, Calendar, MapPin, Award } from "lucide-react";
 import data from "../lib/data";
 
 export default function Education() {

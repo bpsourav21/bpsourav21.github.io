@@ -2,17 +2,10 @@
 
 import type React from "react";
 
-import { useEffect, useRef, useState } from "react";
 import {
-  Phone,
-  Mail,
-  Linkedin,
-  Github,
-  Globe,
-  Send,
-  Facebook,
-  Instagram,
+  Send
 } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 import data from "../lib/data";
 
 export default function Contact() {
