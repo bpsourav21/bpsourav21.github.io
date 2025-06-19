@@ -1,18 +1,16 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import ThemeProvider from "@/src/providers/ThemeProvider";
+import About from "@/src/components/About";
+import Contact from "@/src/components/Contact";
+import Experience from "@/src/components/Experience";
+import Footer from "@/src/components/Footer";
 import Header from "@/src/components/Header";
 import Hero from "@/src/components/Hero";
-import About from "@/src/components/About";
-import Skills from "@/src/components/Skills";
-import Experience from "@/src/components/Experience";
 import Projects from "@/src/components/Projects";
-import Contact from "@/src/components/Contact";
-import Footer from "@/src/components/Footer";
-import ResumePopup from "../components/resume/ResumePopup";
+import Skills from "@/src/components/Skills";
+import ThemeProvider from "@/src/providers/ThemeProvider";
+import { useEffect, useState } from "react";
 import Education from "../components/Education";
-import Reference from "../components/Reference";
 
 export default function Home() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -36,7 +34,6 @@ export default function Home() {
           <Experience />
           <Education />
           <Projects />
-          <Reference />
           <Contact />
         </main>
         <Footer />

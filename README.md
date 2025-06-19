@@ -1,30 +1,43 @@
-# Bpsourav21 Portfolio Site
+# bpsourav21.github.io
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
-
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/mahadi-hasan-souravs-projects/v0-bpsourav21-portfolio-site)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/cIYftMsZfUb)
+Welcome to the repository for **bpsourav21.github.io**! This project hosts the personal or project website for the user `bpsourav21` using GitHub Pages.
 
 ## Overview
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+This repository contains the source code and content for the GitHub Pages site. It is designed to showcase projects, blogs, or other information relevant to the owner.
 
-## Deployment
+This project is live at:
 
-Your project is live at:
+**[https://bpsourav21.github.io](https://bpsourav21.github.io)**
 
-**[https://vercel.com/mahadi-hasan-souravs-projects/v0-bpsourav21-portfolio-site](https://vercel.com/mahadi-hasan-souravs-projects/v0-bpsourav21-portfolio-site)**
+## Features
 
-## Build your app
+- Static site hosted via GitHub Pages
+- Easy to update and maintain
+- Supports Markdown for content creation
 
-Continue building your app on:
+## Getting Started
+To run this site:
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/bpsourav21/bpsourav21.github.io.git
+    ```
+2. Install the required dependencies (if any):
+    ```bash
+    npm install
+    ```
+3. Start the development server:
+    ```bash
+    npm run dev
+    ```
+4. Open your browser and visit [http://localhost:3000](http://localhost:3000) to see the site.
 
-**[https://v0.dev/chat/projects/cIYftMsZfUb](https://v0.dev/chat/projects/cIYftMsZfUb)**
 
-## How It Works
+## License
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+This project is licensed under the [MIT License](LICENSE).
+
+---
+
+© 2025 Mahadi Hasan Sourav. All rights reserved.
+Crafted with ❤️ using Next.js, Tailwind CSS and vercel [v0.dev](https://v0.dev)
