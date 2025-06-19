@@ -24,6 +24,12 @@ export default function About() {
     return () => observer.disconnect();
   }, []);
 
+  const gradients = [
+    "from-blue-500 to-cyan-500",
+    "from-purple-500 to-pink-500",
+    "from-green-500 to-emerald-500",
+    "from-orange-500 to-red-500",
+  ];
   const features = data.SummarySection.featureSummary;
   const professionalSummary = data.SummarySection.professionalSummary;
   const stats = data.SummarySection.stats;
@@ -82,7 +88,7 @@ export default function About() {
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 <div
-                  className={`w-16 h-16 bg-gradient-to-r ${feature.gradient} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg`}
+                  className={`w-16 h-16 bg-gradient-to-r ${gradients[index]} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg`}
                 >
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>

@@ -1,17 +1,15 @@
-import { group } from "console";
 import {
   Code,
-  Palette,
-  Users,
-  Zap,
-  Phone,
-  Mail,
-  Linkedin,
+  Facebook,
   Github,
   Globe,
-  Send,
-  Facebook,
   Instagram,
+  Linkedin,
+  Mail,
+  Palette,
+  Phone,
+  Users,
+  Zap,
 } from "lucide-react";
 
 const contactInfo = {
@@ -180,7 +178,6 @@ const data = {
         ],
         tech: ["React", "Typescript", "Zustand", "Webpack"],
         category: "Web Application",
-        gradient: "from-blue-400 to-purple-500",
         featured: true,
       },
       {
@@ -201,7 +198,6 @@ const data = {
           "Shadcn UI",
         ],
         category: "Educational Platform",
-        gradient: "from-green-400 to-blue-500",
         featured: true,
       },
       {
@@ -214,7 +210,6 @@ const data = {
         ],
         tech: ["React Native", "Typescript", "Expo", "SQLite"],
         category: "Productivity",
-        gradient: "from-teal-400 to-cyan-500",
         featured: false,
       },
       {
@@ -226,7 +221,6 @@ const data = {
         ],
         tech: ["React Native", "Typescript", "Firebase", "Redux"],
         category: "Mobile App",
-        gradient: "from-yellow-400 to-orange-500",
         featured: false,
       },
       {
@@ -246,7 +240,6 @@ const data = {
           "Service Fabric",
         ],
         category: "E-commerce",
-        gradient: "from-pink-400 to-red-500",
         featured: false,
       },
       {
@@ -260,7 +253,6 @@ const data = {
         ],
         tech: ["React Native", "Mobx", "TypeScript"],
         category: "Mobile App",
-        gradient: "from-purple-400 to-pink-500",
         featured: false,
       },
       {
@@ -273,7 +265,6 @@ const data = {
         ],
         tech: ["F#", "React", "Redux", "React-Native", "SQL", "Liquibase"],
         category: "E-commerce",
-        gradient: "from-pink-400 to-orange-500",
         featured: false,
       },
       {
@@ -285,7 +276,6 @@ const data = {
         ],
         tech: ["F#", "React", "Redux", "SQL", "Liquibase"],
         category: "Donation Platform",
-        gradient: "from-teal-400 to-red-500",
         featured: false,
       },
       {
@@ -298,7 +288,6 @@ const data = {
         ],
         tech: ["React", "F#", "SQL", "Service Fabric", "Liquibase"],
         category: "Voting System",
-        gradient: "from-green-400 to-blue-500",
         featured: false,
       },
     ],
@@ -353,28 +342,24 @@ const data = {
         title: "Full-Stack Development",
         description:
           "Building end-to-end solutions with modern frameworks and best practices.",
-        gradient: "from-blue-500 to-cyan-500",
       },
       {
         icon: Palette,
         title: "UI/UX Excellence",
         description:
           "Crafting beautiful, intuitive interfaces that users love to interact with.",
-        gradient: "from-purple-500 to-pink-500",
       },
       {
         icon: Zap,
         title: "Performance Optimization",
         description:
           "Delivering lightning-fast applications with superior user experience.",
-        gradient: "from-green-500 to-emerald-500",
       },
       {
         icon: Users,
         title: "Team Leadership",
         description:
           "Leading cross-functional teams and mentoring developers to achieve excellence.",
-        gradient: "from-orange-500 to-red-500",
       },
     ],
     stats: [
