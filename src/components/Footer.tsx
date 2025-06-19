@@ -8,9 +8,6 @@ export default function Footer() {
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center">
-          <div className="text-4xl font-bold bg-gradient-to-r from-blue-400 via-purple-400 to-blue-500 bg-clip-text text-transparent mb-6 hover:scale-110 transition-transform duration-300 cursor-default">
-            BPSOURAV21
-          </div>
           <p className="text-gray-300 dark:text-gray-400 mb-8 text-lg max-w-2xl mx-auto leading-relaxed">
             Building exceptional digital experiences with passion, precision, and cutting-edge technology.
           </p>

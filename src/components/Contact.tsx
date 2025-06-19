@@ -1,10 +1,9 @@
 "use client";
 
 import type React from "react";
+import { useForm, ValidationError } from "@formspree/react";
 
-import {
-  Send
-} from "lucide-react";
+import { Send } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import data from "../lib/data";
 
@@ -16,6 +15,7 @@ export default function Contact() {
     message: "",
   });
   const sectionRef = useRef<HTMLElement>(null);
+  const [state, handleSubmit] = useForm("mdkzdqbr");
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -34,11 +34,6 @@ export default function Contact() {
     return () => observer.disconnect();
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Handle form submission
-    console.log("Form submitted:", formData);
-  };
 
   const contactInfo = data.ProfileSection.connect;
   const socialLinks = data.ProfileSection.connectSocial;
@@ -130,72 +125,89 @@ export default function Contact() {
                 <h3 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
                   Send a Message
                 </h3>
-                <form onSubmit={handleSubmit} className="space-y-8">
-                  <div>
-                    <label
-                      htmlFor="name"
-                      className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3"
-                    >
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      value={formData.name}
-                      onChange={(e) =>
-                        setFormData({ ...formData, name: e.target.value })
-                      }
-                      className="w-full px-6 py-4 bg-gray-50 dark:bg-gray-700/50 border border-secondary dark:border-primary rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
-                      placeholder="Your full name"
-                      required
-                    />
+                {state.succeeded ? (
+                  <div className="text-xl font-bold text-gray-900 dark:text-white mb-8">
+                    Message sent successfully!
                   </div>
-                  <div>
-                    <label
-                      htmlFor="email"
-                      className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3"
+                ) : (
+                  <form onSubmit={handleSubmit} className="space-y-8">
+                    <div>
+                      <label
+                        htmlFor="name"
+                        className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3"
+                      >
+                        Name
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        className="w-full px-6 py-4 bg-gray-50 dark:bg-gray-700/50 border border-secondary dark:border-primary rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
+                        placeholder="Your full name"
+                        required
+                      />
+                      <ValidationError
+                        prefix="Name"
+                        field="name"
+                        errors={state.errors}
+                      />
+                    </div>
+                    <div>
+                      <label
+                        htmlFor="email"
+                        className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3"
+                      >
+                        Email
+                      </label>
+                      <input
+                        id="email"
+                        type="email"
+                        name="email"
+                        className="w-full px-6 py-4 bg-gray-50 dark:bg-gray-700/50 border border-secondary dark:border-primary rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
+                        placeholder="your.email@example.com"
+                        required
+                      />
+                      <ValidationError
+                        prefix="Email"
+                        field="email"
+                        errors={state.errors}
+                      />
+                    </div>
+                    <div>
+                      <label
+                        htmlFor="message"
+                        className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3"
+                      >
+                        Message
+                      </label>
+                      <textarea
+                        rows={6}
+                        className="w-full px-6 py-4 bg-gray-50 dark:bg-gray-700/50 border border-secondary dark:border-primary rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 resize-none"
+                        placeholder="Your message here..."
+                        required
+                        id="message"
+                        name="message"
+                      />
+                      <ValidationError
+                        prefix="Message"
+                        field="message"
+                        errors={state.errors}
+                      />
+                    </div>
+                    <button
+                      disabled={state.submitting}
+                      type="submit"
+                      className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-8 rounded-2xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-3 shadow-xl hover:shadow-2xl font-semibold text-lg"
                     >
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      value={formData.email}
-                      onChange={(e) =>
-                        setFormData({ ...formData, email: e.target.value })
-                      }
-                      className="w-full px-6 py-4 bg-gray-50 dark:bg-gray-700/50 border border-secondary dark:border-primary rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
-                      placeholder="your.email@example.com"
-                      required
-                    />
-                  </div>
-                  <div>
-                    <label
-                      htmlFor="message"
-                      className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3"
-                    >
-                      Message
-                    </label>
-                    <textarea
-                      id="message"
-                      rows={6}
-                      value={formData.message}
-                      onChange={(e) =>
-                        setFormData({ ...formData, message: e.target.value })
-                      }
-                      className="w-full px-6 py-4 bg-gray-50 dark:bg-gray-700/50 border border-secondary dark:border-primary rounded-2xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 resize-none"
-                      placeholder="Tell me about your project..."
-                      required
-                    ></textarea>
-                  </div>
-                  <button
-                    type="submit"
-                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 text-white py-4 px-8 rounded-2xl hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-3 shadow-xl hover:shadow-2xl font-semibold text-lg"
-                  >
-                    <Send size={24} />
-                    <span>Send Message</span>
-                  </button>
-                </form>
+                      <Send size={24} />
+                      <span>
+                        {state.submitting
+                          ? "Sending Message..."
+                          : "Send Message"}
+                      </span>
+                    </button>
+                  </form>
+                )}
               </div>
             </div>
           </div>
