@@ -7,14 +7,14 @@ export default function EducationSection() {
   return (
     <div className="mt-8 grid grid-cols-1 gap-8">
       <div>
-        <h2 className="text-md font-bold text-primary mb-4 border-b border-primary pb-2">
+        <h2 className="title-style">
           EDUCATION
         </h2>
-        <div className="space-y-4">
+        <div className="space-y-2">
           {educations.map((edu, index) => (
             <div
               key={index}
-              className="border-b border-secondary pb-3 last:border-b-0"
+              className="border-b border-secondary pb-4 last:border-b-0"
             >
               <div className="flex justify-between items-start">
                 <div className="flex-1">

@@ -6,7 +6,7 @@ export default function ProjectsSection() {
 
   return (
     <div className="mt-8">
-      <h2 className="text-md font-bold text-primary mb-4 border-b border-primary pb-2">
+      <h2 className="title-style">
         PROJECTS
       </h2>
       <div className="grid grid-cols-1 gap-4">

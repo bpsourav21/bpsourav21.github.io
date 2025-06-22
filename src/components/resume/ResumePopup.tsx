@@ -19,10 +19,13 @@ export default function ResumePopup({
           <div className="scrollable max-h-[80vh] w-full overflow-y-auto">
             <ResumeHome />
           </div>
+        </div>
+        <div className="flex justify-center">
           <button
             // href="/resume.pdf"
             // target="_blank"
-            className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300"
+            onClick={() => alert("This feature is not implemented yet.")}
+            className="mt-10 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-300"
           >
             <Download size={16} className="inline mr-2" />
             Download Resume

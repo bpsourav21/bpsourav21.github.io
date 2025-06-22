@@ -5,13 +5,13 @@ export default function SkillsSection() {
 
   return (
     <div>
-      <h2 className="text-md font-bold text-primary mb-4 border-b border-primary pb-2">
+      <h2 className="title-style">
         SKILLS
       </h2>
       <div className="grid grid-cols-1 gap-2">
         {Object.entries(skillsByGroup).map(([groupName, skills], index) => (
           <div key={index} className="flex flex-col gap-2">
-            <div className="mb-2" />
+            <div className="mb-0" />
             <div className="flex flex-wrap gap-2">
               {skills.map((skill, index) => (
                 <div

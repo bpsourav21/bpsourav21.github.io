@@ -4,7 +4,7 @@ export default function SummarySection() {
   const summary = data.SummarySection.summary;
   return (
     <div>
-      <h2 className="text-md font-bold text-primary mb-4 border-b border-primary pb-2">
+      <h2 className="title-style">
         SUMMARY
       </h2>
       <p className="text-sm leading-relaxed">{summary}</p>

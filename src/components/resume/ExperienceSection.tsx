@@ -6,10 +6,10 @@ export default function ExperienceSection() {
 
   return (
     <div>
-      <h2 className="text-md font-bold text-primary mb-4 border-b border-primary pb-2">
+      <h2 className="title-style">
         EXPERIENCE
       </h2>
-      <div className="space-y-6">
+      <div className="space-y-2">
         {experiences.map((exp, index) => (
           <div
             key={index}
