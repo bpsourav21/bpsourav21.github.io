@@ -17,7 +17,7 @@ This project is live at:
 - Supports Markdown for content creation
 
 
-# My Journey Creating a Portfolio Website with Vercel v0.dev
+## My Journey Creating a Portfolio Website with Vercel v0.dev
 
 I set out to build a personalized portfolio website, aiming for a modern, responsive, and easily maintainable platform to showcase my projects, skills, and achievements. Here’s how I brought it to life:
 
