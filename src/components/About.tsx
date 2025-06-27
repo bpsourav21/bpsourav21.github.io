@@ -84,11 +84,11 @@ export default function About() {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="group p-8 bg-white dark:bg-gray-800/50 backdrop-blur-sm rounded-3xl border border-secondary dark:border-gray-700/50 hover:border-transparent hover:shadow-2xl dark:hover:shadow-blue-500/10 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2"
+                className="group p-8 bg-white dark:bg-gray-800/50 backdrop-blur-sm rounded-3xl border border-secondary dark:border-gray-700/50 hover:border-transparent hover:shadow-2xl dark:hover:shadow-blue-500/10 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 text-center"
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 <div
-                  className={`w-16 h-16 bg-gradient-to-r ${gradients[index]} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg`}
+                  className={`w-16 h-16 bg-gradient-to-r ${gradients[index]} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-lg`}
                 >
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>

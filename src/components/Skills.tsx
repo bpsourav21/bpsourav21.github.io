@@ -95,15 +95,15 @@ export default function Skills() {
               ></div>
 
               <div className="relative z-10">
-                <div className="mb-8">
+                <div className="flex justify-center items-center mb-8">
                   <div
-                    className={`w-20 h-20 bg-gradient-to-r ${category.color} rounded-3xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-lg`}
+                    className={`w-20 h-20 bg-gradient-to-r ${category.color} rounded-3xl flex items-center justify-center group-hover:scale-110 group-hover:rotate-12 transition-all duration-500 shadow-lg`}
                   >
                     <span className="text-3xl font-bold text-white">
                       {category.title.charAt(0)}
                     </span>
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+                  <h3 className="flex-1 ml-4 text-2xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                     {category.title}
                   </h3>
                 </div>
