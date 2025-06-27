@@ -12,10 +12,11 @@ export default function Experience() {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
+          console.log("🚀 ~ useEffect ~ entry.isIntersecting:", entry.isIntersecting)
           setIsVisible(true);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.2 }
     );
 
     if (sectionRef.current) {
