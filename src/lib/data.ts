@@ -171,6 +171,7 @@ const data = {
     projects: [
       {
         title: "Optimizely Visual Editor",
+        github: null,
         link: null,
         description: [
           "A WSYWIG editor that loads user's website and let them adjust the visitor experience for various experiment however they like for app.optimizely.com",
@@ -182,6 +183,7 @@ const data = {
       },
       {
         title: "MRCS Web App",
+        github: null,
         link: "https://mrcs-web-app.vercel.app",
         description: [
           "A platform for MRCS medical exam where a separate admin panel helps organizing questions and results.",
@@ -201,7 +203,24 @@ const data = {
         featured: true,
       },
       {
+        title: "Color Picker for React",
+        link: null,
+        github: "https://github.com/bpsourav21/color-picker",
+        description: [
+          "A customizable color picker component for React applications.",
+          "Supports various color formats (HEX, RGB, HSL) and includes features like alpha transparency, color history, and copy to clipboard.",
+          "Interactive color palette and sliders",
+          "Input field for manual color entry",
+          "Preset color swatches",
+          "Built with TypeScript for type safety and includes comprehensive documentation.",
+        ],
+        tech: ["React", "Typescript"],
+        category: "Utility Library",
+        featured: false,
+      },
+      {
         title: "Pomodoro Time Counter",
+        github: null,
         link: null,
         description: [
           "A React-Native-Expo application that runs on both IOS and Android",
@@ -214,6 +233,7 @@ const data = {
       },
       {
         title: "Pattern the App",
+        github: null,
         link: "https://thepattern.app",
         description: [
           "Contributed on creating dynamic components and animated UI",
@@ -225,6 +245,7 @@ const data = {
       },
       {
         title: "Chaldal website",
+        github: null,
         link: "https://chaldal.com",
         description: [
           "Developed with ReactJS, Node JS, Typesctipt, SQL, Dotnet Core, C#, F#, SQL, Service Fabric",
@@ -244,6 +265,7 @@ const data = {
       },
       {
         title: "Chaldal App, IOS & Android",
+        github: null,
         link: null,
         description: [
           "Developed with React Native, Mobx, Typescript",
@@ -257,6 +279,7 @@ const data = {
       },
       {
         title: "Chaldal Vegetable Network",
+        github: null,
         link: "https://cdvn.chaldal.com",
         description: [
           "The Chaldal Vegetable Network is a valuable initiative that aims to empower farmers and consumers, promote sustainable agriculture, and contribute to food security in the region.",
@@ -269,6 +292,7 @@ const data = {
       },
       {
         title: "Chaldal Food Aid",
+        github: null,
         link: "https://chaldal.com/food-aid",
         description: [
           "Chaldal Food Aid is a platform that allows users to donate food items to those in need, supporting the community and promoting social responsibility.",
@@ -280,6 +304,7 @@ const data = {
       },
       {
         title: "Chaldal Voting System",
+        github: null,
         link: "https://voting.chaldal.com",
         description: [
           "It's an internal voting system for Chaldal employees to vote for various purposes like employee of the month, project selection etc.",

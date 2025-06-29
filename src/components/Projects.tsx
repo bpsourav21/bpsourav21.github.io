@@ -84,6 +84,7 @@ export default function Projects() {
     "from-blue-400 to-purple-500",
     "from-green-400 to-blue-500",
     "from-purple-400 to-pink-500",
+    "from-yellow-400 to-green-500",
     "from-yellow-400 to-orange-500",
     "from-pink-400 to-red-500",
     "from-orange-400 to-red-500",
@@ -150,9 +151,11 @@ export default function Projects() {
                         <ExternalLink size={16} />
                       </a>
                     )}
-                    <button className="p-2 bg-gray-100 dark:bg-gray-700 text-secondary dark:text-gray-300 rounded-xl hover:bg-purple-500 hover:text-white transition-all duration-300 transform hover:scale-110 shadow-lg">
-                      <Github size={16} />
-                    </button>
+                    {project.github && (
+                      <button className="p-2 bg-gray-100 dark:bg-gray-700 text-secondary dark:text-gray-300 rounded-xl hover:bg-purple-500 hover:text-white transition-all duration-300 transform hover:scale-110 shadow-lg">
+                        <Github size={16} />
+                      </button>
+                    )}
                   </div>
                 </div>
 
